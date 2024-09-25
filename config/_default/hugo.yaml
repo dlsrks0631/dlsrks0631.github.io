@@ -6,13 +6,13 @@
 # Website name
 title: Hugo Academic CV Theme
 # Website URL
-baseURL: 'https://example.com/'
+baseURL: "https://example.com/"
 
 ############################
 ## LANGUAGE
 ############################
 
-defaultContentLanguage: en
+defaultContentLanguage: ko
 hasCJKLanguage: false
 defaultContentLanguageInSubdir: false
 removePathAccents: true
@@ -31,7 +31,7 @@ enableRobotsTXT: true
 footnotereturnlinkcontents: <sup>^</sup>
 ignoreFiles: [\.ipynb$, .ipynb_checkpoints$, \.Rmd$, \.Rmarkdown$, _cache$]
 permalinks:
-  authors: '/author/:slug/'
+  authors: "/author/:slug/"
 disableAliases: true
 outputs:
   home: [HTML, RSS, headers, redirects, backlinks]
