@@ -36,10 +36,11 @@ sections:
     content:
       title: "📚 Skills"
       subtitle: ""
+      username: admin
       text: |-
         여기다가 내가 사용하는 언어를 나열할 예정
     design:
-      columns: "1"
+      show_skill_percentage: false
 
   #### Archiving
   - block: collection
@@ -77,19 +78,4 @@ sections:
       # Education or Experience section first?
       is_education_first: false
 
-  - block: resume-skills
-    content:
-      title: Skills & Hobbies
-      username: admin
-    design:
-      show_skill_percentage: false
-
-  - block: resume-awards
-    content:
-      title: Awards
-      username: admin
-  - block: resume-languages
-    content:
-      title: Languages
-      username: admin
 ---
