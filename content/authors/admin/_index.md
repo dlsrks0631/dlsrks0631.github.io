@@ -84,6 +84,7 @@ skills:
         percent: 40
         icon: circle-stack
 
+
 ---
 
 ## About Me
