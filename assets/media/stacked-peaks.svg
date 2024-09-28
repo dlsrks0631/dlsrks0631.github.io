@@ -7,7 +7,7 @@
 <path d="M0 541L87 541L175 541L262 541L349 541L436 541L524 541L611 541L698 541L785 541L873 541L960 541L960 399L873 366L785 377L698 350L611 388L524 361L436 447L349 426L262 366L175 345L87 393L0 355Z" fill="#33ccff"></path>
 </svg> -->
 
-<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+<svg width="960" height="540" xmlns="http://www.w3.org/2000/svg">
   <!-- Layer 1 -->
   <path d="M0 50 Q400 100 800 50 T1600 50" fill="#cce7ff" />
   <!-- Layer 2 -->

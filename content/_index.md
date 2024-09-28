@@ -29,6 +29,9 @@ sections:
           size: cover
           position: center
           parallax: false
+
+
+#### SKILLS
   - block: markdown
     content:
       title: "📚 Skills"
@@ -37,6 +40,8 @@ sections:
         여기다가 내가 사용하는 언어를 나열할 예정
     design:
       columns: "1"
+
+
   - block: collection
     id: skills
     content:
@@ -48,6 +53,8 @@ sections:
     design:
       view: article-grid
       columns: 3
+
+
   - block: collection
     content:
       title: Recent Publications
