@@ -68,6 +68,8 @@ sections:
 
   - block: resume-experience
     content:
+      title: Careers
+      id: careers
       username: admin
     design:
       # Hugo date format

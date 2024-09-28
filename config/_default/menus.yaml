@@ -17,5 +17,5 @@ main:
     url: /#projects
     weight: 13
   - name: Career
-    url: experience/
+    url: /#careers
     weight: 20
