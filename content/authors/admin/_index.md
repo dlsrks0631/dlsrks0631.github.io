@@ -145,4 +145,4 @@ awards:
 
 ## About Me
 
-I'm a network & cloud engieer.
+나는 졸라 쩌는 웹 개발자야. 안녕
