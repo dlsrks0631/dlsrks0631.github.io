@@ -31,7 +31,7 @@ organizations:
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
-    url: 'mailto:your-email@example.com'
+    url: "mailto:your-email@example.com"
     label: E-mail Me
   - icon: brands/instagram
     url: https://www.instagram.com/kkimjehyeon
@@ -44,28 +44,27 @@ interests:
   - Database
 
 education:
-  - area: IT정보공학과
+  - area: 컴퓨터인공지능학부
     institution: Jeonbuk University
     date_start: 2022-01-01
     date_end: 2025-12-31
     summary: |
-      Thesis on _Why LLMs are awesome_. Supervised by [Prof Joe Smith](https://example.com). Presented papers at 5 IEEE conferences with the contributions being published in 2 Springer journals.
+      전북대학교에서 컴퓨터 공학을 전공하고 있습니다.
     button:
-      text: 'Read Thesis'
-      url: 'https://example.com'
+      text: "Read Thesis"
+      url: "https://example.com"
 
 # experience 칸
 work:
   - position: 연구개발인턴
     company_name: Knowledge-Tech (케이테크)
-    company_url: 'https://www.khub.kr/home/index.jsp'
-    company_logo: ''
+    company_url: "https://www.khub.kr/home/index.jsp"
+    company_logo: ""
     date_start: 2024-02-01
-    date_end: ''
+    date_end: ""
     summary: |2-
       Responsibilities include:
       - 기능 개발 및 서버 관리
-
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
@@ -73,15 +72,15 @@ skills:
   - name: Technical Skills
     items:
       - name: Python
-        description: ''
+        description: ""
         percent: 80
         icon: code-bracket
       - name: Data Science
-        description: ''
+        description: ""
         percent: 100
         icon: chart-bar
       - name: SQL
-        description: ''
+        description: ""
         percent: 40
         icon: circle-stack
 
@@ -92,14 +91,14 @@ skills:
 awards:
   - title: Neural Networks and Deep Learning
     url: https://www.coursera.org/learn/neural-networks-deep-learning
-    date: '2023-11-25'
+    date: "2023-11-25"
     awarder: Coursera
     icon: coursera
     summary: |
       I studied the foundational concept of neural networks and deep learning. By the end, I was familiar with the significant technological trends driving the rise of deep learning; build, train, and apply fully connected deep neural networks; implement efficient (vectorized) neural networks; identify key parameters in a neural network’s architecture; and apply deep learning to your own applications.
   - title: Blockchain Fundamentals
     url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
-    date: '2023-07-01'
+    date: "2023-07-01"
     awarder: edX
     icon: edx
     summary: |
@@ -107,10 +106,10 @@ awards:
       - Synthesize your own blockchain solutions
       - Gain an in-depth understanding of the specific mechanics of Bitcoin
       - Understand Bitcoin’s real-life applications and learn how to attack and destroy Bitcoin, Ethereum, smart contracts and Dapps, and alternatives to Bitcoin’s Proof-of-Work consensus algorithm
-  - title: 'Object-Oriented Programming in R'
+  - title: "Object-Oriented Programming in R"
     url: https://www.datacamp.com/courses/object-oriented-programming-with-s3-and-r6-in-r
     certificate_url: https://www.datacamp.com
-    date: '2023-01-21'
+    date: "2023-01-21"
     awarder: datacamp
     icon: datacamp
     summary: |

@@ -14,12 +14,11 @@ sections:
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
       text: ""
-      color: white
       button:
         text: 포트폴리오 다운로드
         url: uploads/resume.pdf
     design:
-      css_class: dark
+      # css_class: dark
       background:
         color: "#66d9ff"
         image:
