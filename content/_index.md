@@ -67,7 +67,8 @@ sections:
       view: article-grid
       columns: 3
 
-  - block: resume-experience
+  #### Careers
+  - block: collection
     content:
       title: Careers
       id: careers
