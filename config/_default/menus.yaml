@@ -14,7 +14,7 @@ main:
     url: /#archiving
     weight: 12
   - name: Projects
-    url: /#news
+    url: /#projects
     weight: 13
   - name: Career
     url: experience/
