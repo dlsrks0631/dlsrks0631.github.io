@@ -6,7 +6,7 @@ type: landing
 
 design:
   # Default section spacing
-  spacing: "7rem"
+  spacing: "4rem"
 
 sections:
   - block: resume-biography-3
@@ -77,5 +77,4 @@ sections:
       date_format: "January 2006"
       # Education or Experience section first?
       is_education_first: false
-
 ---
