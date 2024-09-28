@@ -53,29 +53,19 @@ education:
     button:
       text: 'Read Thesis'
       url: 'https://example.com'
+
+# experience 칸
 work:
-  - position: Director of Cloud Infrastructure
-    company_name: GenCoin
-    company_url: ''
+  - position: 연구개발인턴
+    company_name: Knowledge-Tech (케이테크)
+    company_url: 'https://www.khub.kr/home/index.jsp'
     company_logo: ''
-    date_start: 2021-01-01
+    date_start: 2024-02-01
     date_end: ''
     summary: |2-
       Responsibilities include:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - position: Backend Software Engineer
-    company_name: X
-    company_url: ''
-    company_logo: ''
-    date_start: 2016-01-01
-    date_end: 2020-12-31
-    summary: |
-      Responsibilities include:
-      - Migrated infrastructure to a new data center
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - 기능 개발 및 서버 관리
+
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
@@ -94,22 +84,6 @@ skills:
         description: ''
         percent: 40
         icon: circle-stack
-  - name: Hobbies
-    # color: '#eeac02'
-    # color_border: '#f0bf23'
-    items:
-      - name: Hiking
-        description: ''
-        percent: 60
-        icon: person-simple-walk
-      - name: Cats
-        description: ''
-        percent: 100
-        icon: cat
-      - name: Photography
-        description: ''
-        percent: 80
-        icon: camera
 
 # Awards.
 #   Add/remove as many awards below as you like.
@@ -145,4 +119,4 @@ awards:
 
 ## About Me
 
-나는 졸라 쩌는 웹 개발자야. 안녕
+나는 졸라 쩌는 웹 개발자야 안녕
