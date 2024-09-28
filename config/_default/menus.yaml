@@ -8,10 +8,10 @@ main:
     url: /
     weight: 10
   - name: Skills
-    url: /#papers
+    url: /#skills
     weight: 11
   - name: Archiving
-    url: /#talks
+    url: /#archiving
     weight: 12
   - name: Projects
     url: /#news

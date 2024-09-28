@@ -14,6 +14,7 @@ sections:
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
       text: ""
+      color: white
       button:
         text: 포트폴리오 다운로드
         url: uploads/resume.pdf
@@ -38,7 +39,7 @@ sections:
     design:
       columns: "1"
   - block: collection
-    id: papers
+    id: skills
     content:
       title: Projects
       filters:
@@ -59,9 +60,9 @@ sections:
     design:
       view: citation
   - block: collection
-    id: talks
+    id: archiving
     content:
-      title: Recent & Upcoming Talks
+      title: Archiving
       filters:
         folders:
           - event
