@@ -1,5 +1,4 @@
 ---
-# Leave the homepage title empty to use the site title
 title: ""
 date: 2022-10-24
 type: landing
@@ -61,10 +60,7 @@ sections:
     id: projects
     content:
       title: Projects
-      filters:
-        folders:
-          - publication
-        featured_only: true
+      username: admin
     design:
       view: article-grid
       columns: 3
