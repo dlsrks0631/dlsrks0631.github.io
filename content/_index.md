@@ -42,16 +42,18 @@ sections:
     design:
       show_skill_percentage: false
 
-  #### Archiving
+  #### Archiving - Github, Blog
   - block: collection
     id: archiving
     content:
       title: Archiving
+      subtitle: ""
+      text: "Check out my recent blog posts below!"
       filters:
         folders:
           - archiving
     design:
-      view: article-grid
+      view: card
       columns: 2
 
   #### Projects
