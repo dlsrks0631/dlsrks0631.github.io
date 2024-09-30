@@ -76,7 +76,7 @@ sections:
       is_education_first: false
 
   #### example
-  - block: slider
+  - block: collection
     content:
       slides:
         - title: <span style="font-size:70%">Recruit</span>
