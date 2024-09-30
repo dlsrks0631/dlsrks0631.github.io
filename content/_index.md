@@ -60,7 +60,7 @@ sections:
     id: projects
     content:
       title: Projects
-      username: admin
+      username: project
     design:
       view: article-grid
       columns: 3
