@@ -1,16 +1,17 @@
 ---
-title: '프로젝트'
+title: "프로젝트"
 date: 2024-05-19
 type: landing
 
 design:
   # Section spacing
-  spacing: '5rem'
+  spacing: "5rem"
 
-# Page sections
+# 프로젝트 안 내용등
 sections:
   - block: collection
     content:
+      username: admin
       title: Selected Projects
       text: I enjoy making things. Here are a selection of projects that I have worked on over the years.
       filters:

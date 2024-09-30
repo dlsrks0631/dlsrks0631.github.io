@@ -74,9 +74,12 @@ sections:
       title: Careers
       username: admin
     design:
-      # Hugo date format
       date_format: "January 2006"
-      # Education or Experience section first?
       is_education_first: false
 
+languages:
+  - name: Korean
+    percent: 100
+  - name: English
+    percent: 75
 ---
