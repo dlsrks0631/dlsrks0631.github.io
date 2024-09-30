@@ -69,9 +69,9 @@ sections:
 
   #### Careers
   - block: collection
+    id: careers
     content:
       title: Careers
-      id: careers
       username: admin
     design:
       # Hugo date format
