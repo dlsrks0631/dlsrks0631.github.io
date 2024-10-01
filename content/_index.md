@@ -34,9 +34,10 @@ sections:
     id: skills
     content:
       title: "📚 Skills"
-      username: 
       subtitle: ""
-      username: skills
+      filters:
+        folders:
+          - skills
       text: |-
         여기다가 내가 사용하는 언어를 나열할 예정
     design:
@@ -87,5 +88,4 @@ sections:
     design:
       date_format: "January 2006"
       is_education_first: false
-
 ---
