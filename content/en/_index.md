@@ -18,7 +18,6 @@ sections:
         url: uploads/resume.pdf
     design:
       css_class: light
-      text-color: white
       background:
         # color: "#66d9ff"
         image:
@@ -28,8 +27,9 @@ sections:
           filters:
             brightness: 0.4
           size: cover
-          position: center
-          parallax: false
+        position: center
+        parallax: false
+        color: '#000'
   #f2f3f7
   #### SKILLS
 
