@@ -34,12 +34,22 @@ sections:
     id: skills
     content:
       title: "📚 Skills"
+      username: 
       subtitle: ""
-      username: admin
+      username: skills
       text: |-
         여기다가 내가 사용하는 언어를 나열할 예정
     design:
       show_skill_percentage: false
+
+  - block: collection
+    id: projects
+    content:
+      title: Projects
+      username: project
+    design:
+      view: article-grid
+      columns: 3
 
   #### Archiving - Github, Blog
   - block: collection
