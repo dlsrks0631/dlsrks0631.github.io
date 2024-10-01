@@ -1,5 +1,5 @@
 ---
-title: CSS33
+title: velog
 external_link: https://github.com/pandas-dev/pandas
 tags:
   - Hugo
@@ -7,6 +7,6 @@ tags:
   - Markdown
 ---
 
-웬만한 CSS에 대해 구글링을 하지 않고 쉽게 사용할 수 있습니다.
+공부 및 지식 공유 목적의 블로그
 
 <!--more-->
