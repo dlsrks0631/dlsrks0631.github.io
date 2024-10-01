@@ -37,6 +37,15 @@ header:
     logo:
       text: "KJH's Portfolio"
       filename: "logo.jpg"
+        show_language: true
+    show_day_night: true
+    show_search: true
+    show_theme_chooser: true
+    show_translations: true
+    button:
+      enable: true
+      text: "kkkkimjehyeon"
+      url: "https://dlsrks0631.github.io/"
 
 # Site footer
 footer:
@@ -53,11 +62,46 @@ locale:
   date_format: "Jan 2, 2006"
   time_format: "3:04 PM"
 
-# Site features
 features:
+  syntax_highlighter:
+    enable: true
+    extra_languages:
+      - r
+      - latex
   math:
     enable: false
   privacy_pack:
     enable: false
+  repository:
+    url: 'https://github.com/dlsrks0631/dlsrks0631.github.io'
+    branch: main
+  avatar:
+    gravatar: false
+    shape: circle
+  comment:
+    provider: ''
+    disqus:
+      shortname: ''
+      show_count: true
+    commento:
+      url: ''
+    giscus:
+      repo: ''
+      repo_id: ''
+      category: ''
+      category_id: ''
+  search:
+    provider: wowchemy
+  map:
+    provider: 'mapnik'
+    api_key: ''
+    zoom: 15
+
+# Site features
+# features:
+#   math:
+#     enable: false
+#   privacy_pack:
+#     enable: false
 
 ogImage: "assets/media/logo.jpg"
