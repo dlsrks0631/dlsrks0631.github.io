@@ -103,7 +103,7 @@ sections:
         folders:
           - archiving
     design:
-      view: card
+      view: article-grid
       columns: 2
       background:
         color: "#f2f3f7"
