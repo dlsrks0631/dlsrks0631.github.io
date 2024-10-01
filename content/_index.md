@@ -81,17 +81,6 @@ sections:
         #   parallax: false
   #f2f3f7
 
-  - block: collection
-    id: projects
-    content:
-      title: Projects
-      filters:
-        folders:
-          - project
-    design:
-      view: article-grid
-      columns: 3
-
   #### Archiving - Github, Blog
   - block: collection
     id: archiving
