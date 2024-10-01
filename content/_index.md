@@ -82,8 +82,6 @@ sections:
       view: article-grid
       columns: 3
 
-  <hr> <!-- 구분선 추가 -->
-
   #### Careers
   - block: collection
     id: careers
