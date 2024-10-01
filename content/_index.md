@@ -29,7 +29,7 @@ sections:
           size: cover
           position: center
           parallax: false
-
+  #f2f3f7
   #### SKILLS
 
   # - block: markdown
@@ -70,6 +70,15 @@ sections:
       view: article-grid
       columns: 3
       show_skill_percentage: true
+      background:
+        color: "#f2f3f7"
+        # image:
+        #   filters:
+        #     brightness: 10.0
+        #   size: cover
+        #   position: center
+        #   parallax: false
+  #f2f3f7
 
   - block: collection
     id: projects
