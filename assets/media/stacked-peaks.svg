@@ -1,4 +1,25 @@
 <svg width="800px" height="300px" xmlns="http://www.w3.org/2000/svg">
+  <!-- 바탕색 변경 -->
+  <rect width="800" height="300" fill="#556270" /> <!-- 딥한 남색으로 변경 -->
+
+  <!-- 각 층별 색상 및 그라데이션 조정 -->
+  <rect y="0" width="800" height="60" fill="#4b5764" />
+  <rect y="60" width="800" height="60" fill="#414e58" />
+  <rect y="120" width="800" height="60" fill="#37454c" />
+  <rect y="180" width="800" height="60" fill="#2d3c40" />
+  <rect y="240" width="800" height="60" fill="#223334" />
+
+  <!-- 그라데이션 효과 조정 -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4b5764;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#223334;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="800" height="300" fill="url(#grad1)" opacity="0.8" /> <!-- 그라데이션 투명도 증가 -->
+</svg>
+
+<!-- <svg width="800px" height="300px" xmlns="http://www.w3.org/2000/svg">
   <!-- 바탕색 -->
   <rect width="800" height="300" fill="#cce7ff" />
 
@@ -16,8 +37,9 @@
       <stop offset="100%" style="stop-color:#66c2ff;stop-opacity:1" />
     </linearGradient>
   </defs>
-  <rect x="0" y="0" width="800" height="300" fill="url(#grad1)" opacity="0.6" />
-</svg>
+  <rect x="0" y="0" width="800" height="300" fill="url(#grad1)" opacity="0.6" /> -->
+<!-- </svg> -->
+
 
 
 
