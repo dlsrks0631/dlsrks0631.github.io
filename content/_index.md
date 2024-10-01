@@ -44,7 +44,7 @@ sections:
     id: skills
     content:
       title: ""
-      subtitle: ""
+      subtitle: "하이 서브타이틀"
       filters:
         folders:
           - skills
@@ -52,7 +52,6 @@ sections:
     design:
       view: article-grid
       columns: 2
-      max-columns:
       show_skill_percentage: true
 
 
