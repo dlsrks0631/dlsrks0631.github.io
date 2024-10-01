@@ -43,7 +43,7 @@ sections:
   - block: collection
     id: skills
     content:
-      title: ""
+      title: "kk"
       subtitle: "하이 서브타이틀"
       filters:
         folders:
