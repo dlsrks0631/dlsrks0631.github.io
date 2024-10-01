@@ -121,6 +121,7 @@ sections:
         color: "#f2f3f7"
 
   - block: contact
+    id: contact
     content:
       title: Contact
       text: |-
