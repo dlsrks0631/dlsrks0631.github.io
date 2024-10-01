@@ -55,6 +55,7 @@ sections:
       filters:
         folders:
           - skills
+      text: "aa"
     design:
       view: article-grid
       columns: 2
