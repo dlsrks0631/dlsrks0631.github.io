@@ -37,3 +37,8 @@ header:
     logo:
       text: "KJH's Portfolio"
       filename: "logo.jpg"
+
+map:
+  provider: "mapnik"
+  api_key: ""
+  zoom: 15
