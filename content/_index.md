@@ -43,7 +43,7 @@ sections:
   - block: collection
     id: skills
     content:
-      # title: "📚 Skills"
+      title: ""
       subtitle: ""
       filters:
         folders:
