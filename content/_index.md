@@ -74,7 +74,7 @@ sections:
     id: projects
     content:
       title: Projects
-      username: project
+      # username: project
     design:
       view: article-grid
       columns: 3
