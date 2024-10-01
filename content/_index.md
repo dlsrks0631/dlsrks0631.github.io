@@ -87,7 +87,7 @@ sections:
     content:
       title: Archiving
       subtitle: ""
-      text: "여긴 아카이빙 부분인데"
+      text: ""
       filters:
         folders:
           - archiving
