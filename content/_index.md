@@ -46,6 +46,9 @@ sections:
     id: projects
     content:
       title: Projects
+      filters:
+        folders:
+          - project
       username: project
     design:
       view: article-grid
