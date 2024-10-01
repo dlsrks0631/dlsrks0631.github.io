@@ -41,7 +41,9 @@ sections:
       text: |-
         여기다가 내가 사용하는 언어를 나열할 예정
     design:
-      show_skill_percentage: false
+      view: article-grid
+      columns: 3
+      show_skill_percentage: true
 
   - block: collection
     id: projects
