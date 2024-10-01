@@ -17,7 +17,7 @@ sections:
         text: 포트폴리오 다운로드
         url: uploads/resume.pdf
     design:
-      # css_class: dark
+      css_class: light
       background:
         # color: "#66d9ff"
         image:
