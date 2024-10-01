@@ -30,7 +30,7 @@ sections:
           parallax: false
 
   #### SKILLS
-  - block: markdown
+  - block: collection
     id: skills
     content:
       title: "📚 Skills"
