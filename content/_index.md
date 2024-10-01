@@ -29,7 +29,10 @@ sections:
           position: center
           parallax: false
 
+  <hr> <!-- 구분선 추가 -->
+
   #### SKILLS
+
   - block: collection
     id: skills
     content:
@@ -45,6 +48,8 @@ sections:
       max-columns:
       show_skill_percentage: true
 
+  <hr> <!-- 구분선 추가 -->
+
   - block: collection
     id: projects
     content:
@@ -52,10 +57,11 @@ sections:
       filters:
         folders:
           - project
-      # username: project
     design:
       view: article-grid
       columns: 3
+
+  <hr> <!-- 구분선 추가 -->
 
   #### Archiving - Github, Blog
   - block: collection
@@ -71,15 +77,18 @@ sections:
       view: card
       columns: 2
 
+  <hr> <!-- 구분선 추가 -->
+
   #### Projects
   - block: collection
     id: projects
     content:
       title: Projects
-      # username: project
     design:
       view: article-grid
       columns: 3
+
+  <hr> <!-- 구분선 추가 -->
 
   #### Careers
   - block: collection
