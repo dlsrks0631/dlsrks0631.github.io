@@ -29,8 +29,6 @@ sections:
           position: center
           parallax: false
 
-  <hr> <!-- 구분선 추가 -->
-
   #### SKILLS
 
   - block: collection
@@ -48,7 +46,6 @@ sections:
       max-columns:
       show_skill_percentage: true
 
-  <hr> <!-- 구분선 추가 -->
 
   - block: collection
     id: projects
@@ -60,8 +57,6 @@ sections:
     design:
       view: article-grid
       columns: 3
-
-  <hr> <!-- 구분선 추가 -->
 
   #### Archiving - Github, Blog
   - block: collection
@@ -77,7 +72,6 @@ sections:
       view: card
       columns: 2
 
-  <hr> <!-- 구분선 추가 -->
 
   #### Projects
   - block: collection
