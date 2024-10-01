@@ -18,6 +18,7 @@ sections:
         url: uploads/resume.pdf
     design:
       css_class: light
+      text-color: white
       background:
         # color: "#66d9ff"
         image:
@@ -104,6 +105,8 @@ sections:
     design:
       view: card
       columns: 2
+      background:
+        color: "#f2f3f7"
 
   #### Projects
   - block: collection
@@ -113,6 +116,8 @@ sections:
     design:
       view: article-grid
       columns: 3
+      background:
+        color: "#f2f3f7"
 
   #### Careers
   - block: collection
@@ -123,4 +128,6 @@ sections:
     design:
       date_format: "January 2006"
       is_education_first: false
+      background:
+        color: "#f2f3f7"
 ---
