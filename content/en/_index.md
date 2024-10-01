@@ -17,7 +17,7 @@ sections:
         text: Download Portfolio
         url: uploads/resume.pdf
     design:
-      css_class: light
+      css_class: dark
       background:
         # color: "#66d9ff"
         image:
@@ -29,7 +29,7 @@ sections:
           size: cover
         position: center
         parallax: false
-        color: '#000'
+        color: "#000"
   #f2f3f7
   #### SKILLS
 
