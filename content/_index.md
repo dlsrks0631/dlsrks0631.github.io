@@ -49,7 +49,7 @@ sections:
       filters:
         folders:
           - project
-      username: project
+      # username: project
     design:
       view: article-grid
       columns: 3
