@@ -7,6 +7,6 @@ tags:
   - 태그3
 ---
 
-Spring으로 REST API를 활용하여 웹 서비스를 개발할 수 있습니다.
+I can develop RESTAPI WebService using Spring Framework.
 
 <!--more-->

@@ -14,7 +14,7 @@ sections:
       username: admin
       text: ""
       button:
-        text: 포트폴리오 다운로드
+        text: Download Portfolio
         url: uploads/resume.pdf
     design:
       css_class: light
@@ -59,11 +59,11 @@ sections:
       title: "Skills"
       subtitle: ""
       text: |-
-        개발 입문 언어를 Python으로 시작하여 언어 사용에 감을 익혔습니다. 이후 개발에 입문하기 전에도 많이 들어봤던 Java를 공부하며 전자정부 프레임워크 Java 개발자 양성과정을 들으며 웹 개발에 대한 기초를 학습하였습니다. 
+        I started my development journey with Python, getting a feel for using the language. Before even beginning development, I had heard a lot about Java and went on to study it, attending a course on Java development using the e-Government Framework to learn the basics of web development.
 
-        수료 후 Java를 바탕으로 자료구조, 알고리즘 그리고 운영체제를 공부하고 현재는 Spring 프레임워크를 활용하여 백엔드 개발자로 활동하고 있습니다. 간단한 웹서비스는 혼자서 개발할 수 있으며,
+        After completing the course, I built on my Java knowledge by studying data structures, algorithms, and operating systems, and I am currently active as a backend developer using the Spring Framework. I can develop simple web services on my own,
 
-        더 나은 서버개발자가 되기위해 Java를 이용해 TDD 개발방법을 사이드 프로젝트에서 훈련하고 Spring 프레임워크에 대한 깊은 공부를 이어가고 있습니다.
+        and to become a better server developer, I am practicing TDD development methods with Java in side projects and continuing my in-depth study of the Spring Framework.
       filters:
         folders:
           - skills

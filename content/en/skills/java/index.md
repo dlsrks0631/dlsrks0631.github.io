@@ -8,6 +8,6 @@ tags:
   - 태그3
 ---
 
-자바ㅇ 기초를 공부하고 순수 자바를 활용 TDD 개발 방법을 적용하여 객체 지향적인 코드개발 능력을 훈련하고 있습니다.
+ I had heard a lot about Java and went on to study it, attending a course on Java development using the e-Government Framework
 
 <!--more-->

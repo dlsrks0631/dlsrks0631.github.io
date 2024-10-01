@@ -7,6 +7,6 @@ tags:
   - Markdown
 ---
 
-웬만한 CSS에 대해 구글링을 하지 않고 쉽게 사용할 수 있습니다.
+I can use CSS without searching in Google.
 
 <!--more-->

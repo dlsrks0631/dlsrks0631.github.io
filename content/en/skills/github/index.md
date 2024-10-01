@@ -7,6 +7,7 @@ tags:
   - Markdown
 ---
 
-Github를 활용해서 프로젝트를 관리하고 커밋을 세분화하는 훈련을 했습니다. Github를 사용해서 알고리즘 문제를 풀이한 내용도 저장하고 있습니다.
+
+I have trained in managing projects and refining my commits using GitHub. I also use GitHub to store solutions to algorithm problems I solve.
 
 <!--more-->
