@@ -1,9 +1,9 @@
 ---
 # Display name
-title: kkimjehyeon
+title: 김제현
 
 # Name pronunciation (optional)
-name_pronunciation: jehyeon
+# name_pronunciation: jehyeon
 
 # Full name (for SEO)
 first_name: Jehyeon
@@ -20,7 +20,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: 졸라 쩌는 웹 개발자
+role: JAVA 백엔드 개발자
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
@@ -88,5 +88,14 @@ skills:
 ---
 
 ## About Me
+### 25살에 시작하는 신입 백엔드 개발자
 
-나는 졸라 쩌는 웹 개발자야 안녕
+안녕하세요. 조금 늦은 나이에 신입 백엔드 개발자가 되고자 하는 김제현입니다.
+
+저는 항상 새로운 것에 도전하는 것을 좋아했고, 그 중 하나로 프로그래밍에 대한 호기심이 많았습니다. 평소 궁금증을 해결하고자 프로그래밍 공부를 시작했고, 코드를 하나씩 작성해보면서 큰 재미와 만족감을 느꼈습니다. 
+
+일과 후 매일 밤, 개발 공부에 몰두하며 점점 더 많은 것을 배워갔습니다. 저는 사람들이 컴퓨터를 사용할 때 느끼는 편안함과 즐거움을 제공할 수 있는 서비스를 직접 개발하고 싶다는 목표를 가지게 되었고, 이를 실현하기 위해 요리사로서의 생활을 접고 전업으로 소프트웨어 개발 공부에 집중하기로 결심했습니다.
+
+늦게 시작한 만큼 더 많은 노력과 시간을 투자하여 다른 이들보다 빠르게 성장하고 있습니다. 백엔드 개발자로서의 기술적 역량을 갖추는 것은 물론, 사용자가 직접 경험할 수 있는 서비스를 만들어 사람들의 일상에 긍정적인 변화를 가져오고 싶습니다.
+
+비록 시작은 늦었지만, 저는 제 두 번째 직업에서도 열정을 가지고 최선을 다할 준비가 되어 있습니다. 감사합니다.
