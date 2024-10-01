@@ -38,14 +38,6 @@ header:
       text: "KJH's Portfolio"
       filename: "logo.jpg"
         show_language: true
-    show_day_night: true
-    show_search: true
-    show_theme_chooser: true
-    show_translations: true
-    button:
-      enable: true
-      text: "kkkkimjehyeon"
-      url: "https://dlsrks0631.github.io/"
 
 # Site footer
 footer:
