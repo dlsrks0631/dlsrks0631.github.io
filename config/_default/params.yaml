@@ -51,7 +51,7 @@ features:
   privacy_pack:
     enable: false
   repository:
-    url: 'https://github.com/seoharu/seoharu.github.io'
+    url: 'https://github.com/dlsrks0631/dlsrks0631.github.io'
     branch: main
   avatar:
     gravatar: false
