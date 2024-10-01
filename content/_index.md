@@ -54,7 +54,7 @@ sections:
   - block: collection
     id: skills
     content:
-      title: ""
+      title: "Skills"
       subtitle: ""
       text: |-
         개발 입문 언어를 Python으로 시작하여 언어 사용에 감을 익혔습니다. 이후 개발에 입문하기 전에도 많이 들어봤던 Java를 공부하며 전자정부 프레임워크 Java 개발자 양성과정을 들으며 웹 개발에 대한 기초를 학습하였습니다. 
