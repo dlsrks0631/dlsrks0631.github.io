@@ -1,4 +1,15 @@
+ignoreLogs = ['error-remote-getcsv']
+
+
+[outputs]
+home = ["HTML", "JSON", "RSS"]
+section = ["HTML", "JSON"]
+taxonomy = ["HTML", "JSON"]
+term = ["HTML", "JSON"]
+
+[frontmatter]
+  lastmod = ["git", "date"]
 
 [params]
   search = true
-  ogImage = "assets/media/logo.jpg
+  ogImage = "assets/media/icon.png"  # 대표 이미지의 경로
