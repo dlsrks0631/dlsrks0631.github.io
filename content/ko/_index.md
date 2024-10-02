@@ -104,6 +104,30 @@ sections:
       background:
         color: "#f2f3f7"
 
+  #### Slider
+  - block: slider
+    content:
+      slides:
+        - title: AI
+          content: "Just opened last month!"
+          align: center
+          background:
+            image:
+              filename: logo.jpg
+              filters:
+                brightness: 0.5
+            position: center
+            color: "#333"
+      design:
+        # Slide height is automatic unless you force a specific height (e.g. '400px')
+        slide_height: "350px"
+        slide_width: "100px"
+        is_fullscreen: false
+        # Automatically transition through slides?
+        loop: true
+        # Duration of transition between slides (in ms)
+        interval: 3000
+
   #### Contact
   - block: contact
     id: contact
@@ -129,28 +153,4 @@ sections:
       columns: "3"
       background:
         color: "#f2f3f7"
-
-  #### Slider
-  - block: slider
-    content:
-      slides:
-        - title: AI
-          content: "Just opened last month!"
-          align: center
-          background:
-            image:
-              filename: logo.jpg
-              filters:
-                brightness: 0.5
-            position: center
-            color: "#333"
-      design:
-        # Slide height is automatic unless you force a specific height (e.g. '400px')
-        slide_height: "350px"
-        slide_width: "100px"
-        is_fullscreen: false
-        # Automatically transition through slides?
-        loop: true
-        # Duration of transition between slides (in ms)
-        interval: 3000
 ---
