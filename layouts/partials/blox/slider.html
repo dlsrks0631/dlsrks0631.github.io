@@ -1,89 +1,71 @@
-<!-- layouts/partials/slider.html -->
-<div
-  class="slider-container"
-  style="width: {{ with .design.slide_width }}{{ . }}{{ else }}100%{{ end }}; height: {{ with .design.slide_height }}{{ . }}{{ else }}350px{{ end }};"
->
-  {{ $slides := .content.slides }}
-  <div class="slides">
-    {{ range $index, $slide := $slides }}
-    <div
-      class="slide {{ if eq $index 0 }}active{{ end }}"
-      style="background-image: url('{{ $slide.background.image.filename }}'); filter: brightness({{ $slide.background.image.filters.brightness }}); background-color: {{ $slide.background.color }}; background-position: center; background-size: cover;"
-    >
-      <div class="slide-content" style="text-align: {{ $slide.align }};">
-        <h2>{{ $slide.title }}</h2>
-        <p>{{ $slide.content }}</p>
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Inline CSS for Swiper -->
+    <style>
+        .swiper-container {
+            width: 100%;
+            height: 350px;
+        }
+
+        .swiper-slide {
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .slide-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Slider Section -->
+    <div class="swiper-container mySwiper">
+        <div class="swiper-wrapper">
+            {{ range .Params.sections }}
+                {{ if eq .block "slider" }}
+                    {{ range .content.slides }}
+                        <div class="swiper-slide" style="background-image: url('{{ printf "media/%s" .background.image.filename }}'); background-position: {{ .background.position }}; background-color: {{ .background.color }}; filter: brightness({{ .background.image.filters.brightness }});">
+                            <div class="slide-content" style="text-align: {{ .align }};">
+                                <h2>{{ .title }}</h2>
+                                <p>{{ .content }}</p>
+                            </div>
+                        </div>
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
-    {{ end }}
-  </div>
-  <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-  <a class="next" onclick="changeSlide(1)">&#10095;</a>
-</div>
-<script>
-  let currentSlide = 0;
-  const slides = document.querySelectorAll('.slide');
-  const showSlide = (index) => {
-    slides.forEach(slide => slide.style.display = 'none');
-    slides[index].style.display = 'block';
-  };
-  const changeSlide = (increment) => {
-    currentSlide += increment;
-    if (currentSlide >= slides.length) currentSlide = 0;
-    if (currentSlide < 0) currentSlide = slides.length - 1;
-    showSlide(currentSlide);
-  };
-  document.addEventListener('DOMContentLoaded', () => {
-    showSlide(0);
-    setInterval(() => changeSlide(1), {{ with .design.interval }}{{ . }}{{ else }}3000{{ end }});
-  });
-</script>
-<style>
-  .slider-container {
-    overflow: hidden;
-    position: relative;
-  }
-  .slides {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    transition: transform 0.5s ease;
-  }
-  .slide {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-  }
-  .slide-content {
-    color: white;
-    text-align: center;
-  }
-  .prev,
-  .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    user-select: none;
-    z-index: 1000;
-  }
-  .prev {
-    left: 0;
-  }
-  .next {
-    right: 0;
-  }
-  .prev:hover,
-  .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-</style>
+
+    <!-- Inline JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.mySwiper', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: {{ with .Params.sections.loop }}{{ .interval }}{{ else }}3000{{ end }},
+                disableOnInteraction: false,
+            }
+        });
+    </script>
+</body>
+</html>
