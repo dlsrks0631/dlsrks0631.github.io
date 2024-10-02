@@ -138,7 +138,7 @@ sections:
                 brightness: 0.5
             position: center
             color: "#333"
-                    - title: AI
+        - title: AI
           content: "Just opened last month!"
           align: center
           background:
