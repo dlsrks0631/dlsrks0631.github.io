@@ -130,45 +130,20 @@ sections:
       background:
         color: "#f2f3f7"
 
-sections:
   #### Slider
-  - block: slider
-      content:
-        slides:
-        - title: Recruit
-          content: Interested in kk??
-          align: center
-          background:
-            image:
-              filename: logo.jpg
-              filters:
-                brightness: 0.4
-            position: center
-            color: '#000'
-          # link:
-          #   icon: user
-          #   icon_pack: fas
-          #   text: <span style="font-size:60%">Join Us</span>
-          #   text-color: '#000'
-          #   url: contact
-
-        - title: Recruit2
-          content: Interested in kk??
-          align: center
-          background:
-            image:
-              filename: logo.jpg
-              filters:
-                brightness: 0.4
-            position: center
-            color: '#000'
-          # link:
-          #   icon: user
-          #   icon_pack: fas
-          #   text: <span style="font-size:60%">Join Us</span>
-          #   text-color: '#000'
-          #   url: contact
-
+   - block: slider
+    content:
+      slides:
+      - title: AI
+        content: 'Just opened last month!'
+        align: center
+        background:
+          image:
+            filename: logo.jpg
+            filters:
+              brightness: 0.5
+          position: center
+          color: '#333'
       design:
         # Slide height is automatic unless you force a specific height (e.g. '400px')
         slide_height: '350px'
