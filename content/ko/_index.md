@@ -5,7 +5,7 @@ type: landing
 
 design:
   # Default section spacing
-  spacing: "4rem"
+  # spacing: "4rem"
   background:
     color: "#f2f3f7"
 
