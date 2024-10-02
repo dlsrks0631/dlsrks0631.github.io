@@ -1,132 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Custom Slider</title>
-    <style>
-      body,
-      html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        overflow: hidden;
-      }
-      .slider {
-        width: 100px;
-        height: 350px;
-        position: relative;
-        overflow: hidden;
-        margin: auto;
-      }
-      .slides {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-      }
-      .slide {
-        width: 100%;
-        height: 350px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-size: cover;
-        background-position: center;
-        filter: brightness(0.5);
-      }
-      .content {
-        text-align: center;
-        color: white;
-        background-color: rgba(
-          51,
-          51,
-          51,
-          0.5
-        ); /* background color with opacity */
-        padding: 20px;
-        border-radius: 10px;
-      }
-      .prev,
-      .next {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        padding: 16px;
-        margin-top: -22px;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-      }
-      .prev {
-        left: 0;
-        border-radius: 3px 0 0 3px;
-      }
-      .next {
-        right: 0;
-        border-radius: 0 3px 3px 0;
-      }
-      .prev:hover,
-      .next:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-      }
-    </style>
-  </head>
-  <body>
-    <div class="slider">
-      <div class="slides">
-        <div class="slide active" style="background-image: url('logo.jpg')">
-          <div class="content">
-            <h1>AI</h1>
-            <p>Just opened last month!</p>
-          </div>
-        </div>
-        <div class="slide" style="background-image: url('logo.jpg')">
-          <div class="content">
-            <h1>AI</h1>
-            <p>Just opened last month!</p>
-          </div>
-        </div>
-        <div class="slide" style="background-image: url('logo.jpg')">
-          <div class="content">
-            <h1>AI</h1>
-            <p>Just opened last month!</p>
-          </div>
-        </div>
-        <div class="slide" style="background-image: url('logo.jpg')">
-          <div class="content">
-            <h1>AI</h1>
-            <p>Just opened last month!</p>
-          </div>
-        </div>
+<!-- layouts/partials/slider.html -->
+<div
+  class="slider-container"
+  style="width: {{ with .design.slide_width }}{{ . }}{{ else }}100%{{ end }}; height: {{ with .design.slide_height }}{{ . }}{{ else }}350px{{ end }};"
+>
+  {{ $slides := .content.slides }}
+  <div class="slides">
+    {{ range $index, $slide := $slides }}
+    <div
+      class="slide {{ if eq $index 0 }}active{{ end }}"
+      style="background-image: url('{{ $slide.background.image.filename }}'); filter: brightness({{ $slide.background.image.filters.brightness }}); background-color: {{ $slide.background.color }}; background-position: center; background-size: cover;"
+    >
+      <div class="slide-content" style="text-align: {{ $slide.align }};">
+        <h2>{{ $slide.title }}</h2>
+        <p>{{ $slide.content }}</p>
       </div>
-      <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
-      <a class="next" onclick="moveSlide(1)">&#10095;</a>
     </div>
-    <script>
-      let slideIndex = 0;
-      showSlides();
-
-      function showSlides() {
-        let i;
-        let slides = document.getElementsByClassName("slide");
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {
-          slideIndex = 1;
-        }
-        slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 3000); // Change image every 3 seconds
-      }
-
-      function moveSlide(n) {
-        slideIndex += n - 1;
-        showSlides();
-      }
-    </script>
-  </body>
-</html>
+    {{ end }}
+  </div>
+  <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+  <a class="next" onclick="changeSlide(1)">&#10095;</a>
+</div>
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+  const showSlide = (index) => {
+    slides.forEach(slide => slide.style.display = 'none');
+    slides[index].style.display = 'block';
+  };
+  const changeSlide = (increment) => {
+    currentSlide += increment;
+    if (currentSlide >= slides.length) currentSlide = 0;
+    if (currentSlide < 0) currentSlide = slides.length - 1;
+    showSlide(currentSlide);
+  };
+  document.addEventListener('DOMContentLoaded', () => {
+    showSlide(0);
+    setInterval(() => changeSlide(1), {{ with .design.interval }}{{ . }}{{ else }}3000{{ end }});
+  });
+</script>
+<style>
+  .slider-container {
+    overflow: hidden;
+    position: relative;
+  }
+  .slides {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  .slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+  }
+  .slide-content {
+    color: white;
+    text-align: center;
+  }
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    z-index: 1000;
+  }
+  .prev {
+    left: 0;
+  }
+  .next {
+    right: 0;
+  }
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+</style>
