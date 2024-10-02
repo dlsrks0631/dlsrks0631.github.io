@@ -118,6 +118,36 @@ sections:
                 brightness: 0.5
             position: center
             color: "#333"
+        - title: AI
+          content: "Just opened last month!"
+          align: center
+          background:
+            image:
+              filename: logo.jpg
+              filters:
+                brightness: 0.5
+            position: center
+            color: "#333"
+        - title: AI
+          content: "Just opened last month!"
+          align: center
+          background:
+            image:
+              filename: logo.jpg
+              filters:
+                brightness: 0.5
+            position: center
+            color: "#333"
+                    - title: AI
+          content: "Just opened last month!"
+          align: center
+          background:
+            image:
+              filename: logo.jpg
+              filters:
+                brightness: 0.5
+            position: center
+            color: "#333"
       design:
         # Slide height is automatic unless you force a specific height (e.g. '400px')
         slide_height: "350px"
