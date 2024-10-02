@@ -35,7 +35,7 @@
                 {{ if eq .block "slider" }}
                     {{ range .content.slides }}
                         <div class="swiper-slide" style="background-image: url('{{ printf "media/%s" .background.image.filename }}'); background-position: {{ .background.position }}; background-color: {{ .background.color }}; filter: brightness({{{ .background.image.filters.brightness }}});">
-                            <div class="slide-content" style="text-align: {{ .align }};">
+                            <div class="slide-content"">
                                 <h2>{{ .title }}</h2>
                                 <p>{{ .content }}</p>
                             </div>
