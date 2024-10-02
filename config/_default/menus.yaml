@@ -8,11 +8,11 @@ main:
     url: /
     weight: 10
   - name: Skills
-    parent: about
+    parent: About me
     url: /#skills
   - name: Archiving
     url: /#archiving
-    parent: about
+    parent: About me
   - name: Projects
     url: /#projects
     weight: 13
