@@ -56,19 +56,19 @@
     <!-- Email -->
     <li class="contact-item">
       <i class="contact-icon fas fa-envelope"></i>
-      <span class="contact-text"><a href="mailto:example@example.com">example@example.com</a></span>
+      <span class="contact-text"><a href="mailto:example@example.com">dlsrks0631@naver.com</a></span>
     </li>
 
     <!-- Phone -->
     <li class="contact-item">
       <i class="contact-icon fas fa-phone"></i>
-      <span class="contact-text"><a href="tel:+1234567890">+1 234 567 890</a></span>
+      <span class="contact-text"><a href="tel:+1234567890">010-6758-4567</a></span>
     </li>
 
     <!-- Address -->
     <li class="contact-item">
       <i class="contact-icon fas fa-map-marker-alt"></i>
-      <span class="contact-text">123 Main St, City, Country</span>
+      <span class="contact-text">전북대학교 공과대학 7호관</span>
     </li>
 
     <!-- Office Hours -->
@@ -87,12 +87,12 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     // Initialize the map on the "map" div
-    var map = L.map('map').setView([51.505, -0.09], 13);
+    var map = L.map('map').setView([35.851786, 127.128730], 13);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© OpenStreetMap contributors'
     }).addTo(map);
     var marker = L.marker([51.505, -0.09]).addTo(map);
-    marker.bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
+    marker.bindPopup("<b>안녕</b><br />난 여기에 있다.").openPopup();
   });
 </script>
 
