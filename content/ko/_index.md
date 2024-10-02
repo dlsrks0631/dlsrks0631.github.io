@@ -126,11 +126,11 @@ sections:
     content:
       title: Contact
       text: |-
-        전북대학교 김제현
-      email: ksl(at)jbnu.ac.kr
-      phone: +82-63-270-2406
+        나에게 관심이 있다면 여기로 !!!!!!!
+      email: dlsrks0631@naver.com
+      phone: 010-6758-1234
       address:
-        street: 전북대학교 공과대학 7호관 626호
+        street: 전북대학교 공과대학 7호관
         city: 전주시
         region: 전라북도
         postcode: "54896"
@@ -143,4 +143,6 @@ sections:
       autolink: true
     design:
       columns: "3"
+      background:
+        color: "#f2f3f7"
 ---
