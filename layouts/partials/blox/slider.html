@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <!-- Inline CSS for Swiper -->
     <style>
         .swiper-container {
@@ -32,7 +34,7 @@
             {{ range .Params.sections }}
                 {{ if eq .block "slider" }}
                     {{ range .content.slides }}
-                        <div class="swiper-slide" style="background-image: url('{{ printf "media/%s" .background.image.filename }}'); background-position: {{ .background.position }}; background-color: {{ .background.color }}; filter: brightness({{ .background.image.filters.brightness }});">
+                        <div class="swiper-slide" style="background-image: url('{{ printf "media/%s" .background.image.filename }}'); background-position: {{ .background.position }}; background-color: {{ .background.color }}; filter: brightness({{{ .background.image.filters.brightness }}});">
                             <div class="slide-content" style="text-align: {{ .align }};">
                                 <h2>{{ .title }}</h2>
                                 <p>{{ .content }}</p>
@@ -48,5 +50,21 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
     </div>
+
+    <!-- Swiper's JavaScript -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.mySwiper', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 </body>
 </html>
