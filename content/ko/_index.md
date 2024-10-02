@@ -129,4 +129,51 @@ sections:
       columns: "3"
       background:
         color: "#f2f3f7"
+
+  - block: slider
+      content:
+        slides:
+        - title: Recruit
+          content: Interested in kk??
+          align: center
+          background:
+            image:
+              filename: logo.jpg
+              filters:
+                brightness: 0.4
+            position: center
+            color: '#000'
+          link:
+            icon: user
+            icon_pack: fas
+            text: <span style="font-size:60%">Join Us</span>
+            text-color: '#000'
+            url: contact
+
+        - title: Recruit2
+          content: Interested in kk??
+          align: center
+          background:
+            image:
+              filename: logo.jpg
+              filters:
+                brightness: 0.4
+            position: center
+            color: '#000'
+          link:
+            icon: user
+            icon_pack: fas
+            text: <span style="font-size:60%">Join Us</span>
+            text-color: '#000'
+            url: contact
+
+      design:
+        # Slide height is automatic unless you force a specific height (e.g. '400px')
+        slide_height: '350px'
+        slide_width: '100px'
+        is_fullscreen: false
+        # Automatically transition through slides?
+        loop: true
+        # Duration of transition between slides (in ms)
+        interval: 3000
 ---
