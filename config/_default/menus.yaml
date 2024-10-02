@@ -20,5 +20,5 @@ main:
     url: /#careers
     weight: 20
   - name: Contact
-    url: /#contact
+    url: /contact
     weight: 24
