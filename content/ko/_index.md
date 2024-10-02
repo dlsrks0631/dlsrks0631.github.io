@@ -130,6 +130,7 @@ sections:
       background:
         color: "#f2f3f7"
 
+sections:
   #### Slider
   - block: slider
       content:
