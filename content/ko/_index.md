@@ -130,6 +130,7 @@ sections:
       background:
         color: "#f2f3f7"
 
+  #### Slider
   - block: slider
       content:
         slides:
@@ -143,12 +144,12 @@ sections:
                 brightness: 0.4
             position: center
             color: '#000'
-          link:
-            icon: user
-            icon_pack: fas
-            text: <span style="font-size:60%">Join Us</span>
-            text-color: '#000'
-            url: contact
+          # link:
+          #   icon: user
+          #   icon_pack: fas
+          #   text: <span style="font-size:60%">Join Us</span>
+          #   text-color: '#000'
+          #   url: contact
 
         - title: Recruit2
           content: Interested in kk??
@@ -160,12 +161,12 @@ sections:
                 brightness: 0.4
             position: center
             color: '#000'
-          link:
-            icon: user
-            icon_pack: fas
-            text: <span style="font-size:60%">Join Us</span>
-            text-color: '#000'
-            url: contact
+          # link:
+          #   icon: user
+          #   icon_pack: fas
+          #   text: <span style="font-size:60%">Join Us</span>
+          #   text-color: '#000'
+          #   url: contact
 
       design:
         # Slide height is automatic unless you force a specific height (e.g. '400px')
