@@ -1,70 +1,115 @@
-{{/* Initialise */}}
-{{ $page := .wcPage }}
-{{ $block := .wcBlock }}
-{{ $autolink := default true $block.content.autolink }}
-{{ $data := $block.content }}
-
-{{ $form_provider := lower $block.content.form.provider | default "" }}
-
-{{ $use_netlify_form := eq $form_provider "netlify" }}
-{{ $use_formspree_form := eq $form_provider "formspree" }}
-{{ $use_form := or $use_netlify_form $use_formspree_form }}
-
-{{ $use_netlify_captcha := $block.content.form.netlify.captcha | default true }}
-{{ $use_formspree_captcha := $block.content.form.formspree.captcha | default false }}
-
-{{ $columns := $block.design.columns | default "2" }}
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <!-- Other head content -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.css">
-</head>
-{{ if and $use_formspree_form $use_formspree_captcha }}
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-{{ end }}
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script>
-  function initMap() {
-    if ($('#map').length) {
-      let lat = parseFloat($('#map-lat').val());
-      let lng = parseFloat($('#map-lng').val());
-      let zoom = parseInt($('#map-zoom').val());
-      let address = $('#map-dir').val();
-
-      let map = L.map('map').setView([lat, lng], zoom);
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
-        maxZoom: 18,
-      }).addTo(map);
-      L.marker([lat, lng]).addTo(map)
-        .bindPopup('<b>' + address + '</b>')
-        .openPopup();
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Page</title>
+  <style>
+    body, html {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background: #f8f9fa;
     }
-  }
+    .container {
+      width: 100%; /* 최대 너비를 100%로 설정하여 브라우저 전체 너비를 사용하도록 합니다. */
+      margin: 0 auto;
+      padding: 20px;
+      box-sizing: border-box; /* 패딩이 너비에 포함되도록 설정 */
+    }
+    h2 {
+      color: #007bff;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
 
-  $(document).ready(function () {
-    initMap();
-  });
-</script>
-<style>
-  #map {
-    height: 400px;
-    width: 100%;
-    border-radius: 8px; /* Rounded corners for the map */
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
-    border: 1px solid #ccc; /* Adds a light border around the map */
-  }
-</style>
+    p {
+      font-size: 16px;
+      color: #666;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
 
-<div class="contact-info">
-    <h2>{{ $block.content.title | markdownify }}</h2>
-    <p>{{ $block.content.text | markdownify }}</p>
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .contact-icon {
+      color: #007bff;
+      font-size: 24px;
+      width: 30px;
+      margin-right: 10px;
+    }
+
+    .contact-text a {
+      color: #007bff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    .contact-text a:hover {
+      text-decoration: underline;
+    }
+
+    #map {
+      width: 100%; /* 지도의 너비를 100%로 설정 */
+      height: 350px; /* 지도의 높이를 350px로 설정 */
+      margin-top: 20px;
+      background: #e9ecef;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <div class="mb-4">
+        <h2>Contact Information</h2>
+        <p>Please feel free to reach out to us with any questions or comments!</p>
+      </div>
+
+      <ul>
+        <li>
+          <i class="contact-icon fas fa-envelope"></i>
+          <span><a href="mailto:example@example.com">example@example.com</a></span>
+        </li>
+        <li>
+          <i class="contact-icon fas fa-phone"></i>
+          <span><a href="tel:+1234567890">+1 234 567 890</a></span>
+        </li>
+        <li>
+          <i class="contact-icon fas fa-map-marker-alt"></i>
+          <span>12344 Main St, City, Country</span>
+        </li>
+        <li>
+          <i class="contact-icon fas fa-clock"></i>
+          <span>Mon - Fri, 9:00 AM to 5:00 PM</span>
+        </li>
+      </ul>
+
+      <div id="map"></div>
+    </div>
+  </div>
 </div>
 
-<ul class="fa-ul">
-  {{ if $data.email }}
-    <li><i class="fa-li fa fa-envelope"></i>{{ if $autolink }}<a href="mailto:{{ $data.email }}">{{ $data.email }}</a>{{ else }}{{ $data.email }}{{ end }}</li>
-  {{ end }}
-  {{ if $data.phone }}
-    <li><i class="fa-li fa fa-phone"></i>{{ if
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var map = L.map('map').setView([51.505, -0.09], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+    var marker = L.marker([51.505, -0.09]).addTo(map);
+    marker.bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
+  });
+</script>
+</body>
+</html>
