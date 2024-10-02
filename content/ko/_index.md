@@ -183,4 +183,82 @@ sections:
       columns: "3"
       background:
         color: "#f2f3f7"
+
+
+
+
+  - block: slider
+    content:
+      slides:
+
+      - title: <span style="font-size:70%">About</span>
+        content: <span style="font-size:70%">Interested in SEOYEON?</span>
+        align: center
+        background:
+          image:
+            filename: 
+            filters:
+              brightness: 0.4
+          position: center
+          color: '#000'
+        link:
+          icon: user
+          icon_pack: fas
+          text: <span style="font-size:60%">Contact</span>
+          text-color: '#000'
+          url: contact
+
+      - title: <span style="font-size:70%">Medical AI</span>
+        content: <span style="font-size:70%">joint major - Medical AI & undergraduate student researcher in MACS<span style="font-size:70%">
+        align: center
+        background:
+          image:
+            filename: 
+            filters:
+              brightness: 0.4
+          position: center
+          color: '#000'
+
+      - title: <span style="font-size:70%">Project</span>
+        content: <span style="font-size:70%">Multiple projects and research in progress</span>
+        align: center
+        background:
+          image:
+            filename: 
+            filters:
+              brightness: 0.4
+          position: center
+          color: '#000'
+
+      - title: <span style="font-size:70%">Development</span>
+        content: <span style="font-size:70%">Participated in several developments, including the Litmus Renewal Project</span>
+        align: center
+        background:
+          image:
+            filename: 
+            filters:
+              brightness: 0.4
+          position: center
+          color: '#000'
+
+      - title: <span style="font-size:70%">Activity</span>
+        content: <span style="font-size:70%">Exchange student and more</span>
+        align: center
+        background:
+          image:
+            filename: 
+            filters:
+              brightness: 0.4
+          position: center
+          color: '#000'
+
+
+    design:
+      # Slide height is automatic unless you force a specific height (e.g. '400px')
+      slide_height: '350px'
+      is_fullscreen: true
+      # Automatically transition through slides?
+      loop: true
+      # Duration of transition between slides (in ms)
+      interval: 3000
 ---
