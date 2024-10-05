@@ -188,6 +188,7 @@ sections:
         color: "#f2f3f7"
 
   - block: slider
+    id: slider
     content:
       slides:
         - title: Recruit
