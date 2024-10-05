@@ -1,13 +1,23 @@
-{{/* Initialise */}} {{ $page := .wcPage }} {{ $block := .wcBlock }} {{ $hash_id
-:= .wcIdentifier }} {{ $slide_count := len $block.content.slides }}
+<!-- slider.html -->
+{{ $slides := .Site.Data.slides }}
+
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+/>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 <section
   id="carouselExampleIndicators"
   class="carousel slide"
   data-ride="carousel"
 >
+  <!-- Indicators -->
+  {{ if gt (len $slides) 1 }}
   <ol class="carousel-indicators">
-    {{ range $index, $element := $block.content.slides }}
+    {{ range $index, $item := $slides }}
     <li
       data-target="#carouselExampleIndicators"
       data-slide-to="{{ $index }}"
@@ -23,16 +33,31 @@
     ></li>
     {{ end }}
   </ol>
+  {{ end }}
+
+  <!-- Carousel slides wrapper -->
   <div class="carousel-inner">
-    {{ range $index, $slide := $block.content.slides }}
+    {{ range $index, $item := $slides }}
     <div class="carousel-item {{ if eq $index 0 }}active{{ end }}">
-      <img class="d-block w-100" src="{{ $slide.image}}" />
+      {{ with $item.background }}
+      <img
+        class="d-block w-100"
+        src="{{ .image.filename }}"
+        alt="{{ $item.title }}"
+        style="background-color: {{ .color | default 'transparent' }};
+        {{ if .gradient_start }}background-image: linear-gradient({{ .gradient_angle | default '90' }}deg, {{ .gradient_start }}, {{ .gradient_end }});{{ end }}
+        background-position: {{ .image.position | default 'center' }};
+        background-size: {{ .image.size | default 'cover' }};
+        -webkit-backdrop-filter: brightness({{ .image.filters.brightness | default '100%' }});
+        backdrop-filter: brightness({{ .image.filters.brightness | default '100%' }});"
+      />
+      {{ end }}
       <div class="carousel-caption d-none d-md-block">
-        <h5>{{ $slide.title }}</h5>
-        <p>{{ $slide.description }}</p>
-        {{ if $slide.url }}
+        <h5>{{ $item.title }}</h5>
+        <p>{{ $item.content }}</p>
+        {{ if $item.link.url }}
         <p>
-          <a class="btn btn-primary" href="{{ $slide.url }}" role="button"
+          <a class="btn btn-primary" href="{{ $item.link.url }}" role="button"
             >Learn More</a
           >
         </p>
@@ -41,6 +66,9 @@
     </div>
     {{ end }}
   </div>
+
+  <!-- Left and right controls -->
+  {{ if gt (len $slides) 1 }}
   <a
     class="carousel-control-prev"
     href="#carouselExampleIndicators"
@@ -59,4 +87,5 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+  {{ end }}
 </section>
