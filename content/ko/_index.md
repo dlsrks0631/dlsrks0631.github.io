@@ -133,6 +133,17 @@ sections:
             position: center
             color: "#000"
 
+        - title: <span style="font-size:70%">java spring</span>
+          content: <span style="font-size:70%">자바 스프링 백엔드 개발</span>
+          align: center
+          background:
+            image:
+              filename: project.jpg
+              filters:
+                brightness: 0.4
+            position: center
+            color: "#000"
+
       design:
         slide_height: 350px
         is_fullscreen: false
