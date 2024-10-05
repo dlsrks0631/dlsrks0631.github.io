@@ -1,159 +1,154 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carousel Example</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <style>
-      .carousel {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-      }
+<style>
+  .carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
 
-      .carousel-inner {
-        display: flex;
-        width: 100%;
-        transition: transform 0.5s ease;
-      }
+  .carousel-inner {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease;
+  }
 
-      .carousel-item {
-        flex: 0 0 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-      }
+  .carousel-item {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
 
-      .carousel-control-prev,
-      .carousel-control-next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 30px;
-        color: white;
-        text-decoration: none;
-        width: 30px;
-        height: 30px;
-        background: rgba(0, 0, 0, 0.5);
-        border: none;
-        cursor: pointer;
-        align-items: center;
-        justify-content: center;
-        display: flex;
-      }
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
 
-      .carousel-control-prev-icon,
-      .carousel-control-next-icon {
-        display: block;
-        width: 20px;
-        height: 20px;
-        background-size: 20px 20px;
-        color: black;
-      }
+  .carousel-control-prev-icon {
+    background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fff" viewBox="0 0 8 8"%3E%3Cpath d="M5.5 0l-5 4 5 4V5H8V3H5.5V0z"%3E%3C/path%3E%3C/svg%3E');
+  }
 
-      .carousel-indicators {
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-      }
+  .carousel-control-next-icon {
+    background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fff" viewBox="0 0 8 8"%3E%3Cpath d="M2.5 0v3H0v2h2.5v3l5-4-5-4z"%3E%3C/path%3E%3C/svg%3E');
+  }
 
-      .carousel-indicators li {
-        list-style: none;
-        margin: 0 2px;
-        background: black;
-        width: 8px;
-        height: 8px;
-        border-radius: 100%;
-        cursor: pointer;
-      }
+  .carousel-control-prev {
+    left: 10px;
+  }
 
-      .carousel-indicators .active {
-        background: gray;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="exampleCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li
-          data-target="#exampleCarousel"
-          data-slide-to="0"
-          class="active"
-        ></li>
-        <li data-target="#exampleCarousel" data-slide-to="1"></li>
-      </ol>
+  .carousel-control-next {
+    right: 10px;
+  }
 
-      <!-- Carousel slides wrapper -->
-      <div class="carousel-inner">
-        <div
-          class="carousel-item active"
-          style="
-            background-image: url('/assets/media/project.jpg');
-            filter: brightness(0.4);
-          "
-        >
-          <div class="container">
-            <div class="carousel-caption text-center">
-              <h5>정보처리기사</h5>
-              <p>2024-06-18</p>
-            </div>
-          </div>
-        </div>
-        <div
-          class="carousel-item"
-          style="
-            background-image: url('/assets/media/project2.jpg');
-            filter: brightness(0.4);
-          "
-        >
-          <div class="container">
-            <div class="carousel-caption text-center">
-              <h5>AdSP</h5>
-              <p>2024-09-24</p>
-            </div>
-          </div>
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-size: 20px 20px;
+    color: black;
+  }
+
+  .carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+
+  .carousel-indicators li {
+    list-style: none;
+    margin: 0 2px;
+    background: black;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    cursor: pointer;
+  }
+
+  .carousel-indicators .active {
+    background: gray;
+  }
+</style>
+
+<div id="exampleCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#exampleCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#exampleCarousel" data-slide-to="1"></li>
+  </ol>
+
+  <!-- Carousel slides wrapper -->
+  <div class="carousel-inner">
+    <div
+      class="carousel-item active"
+      style="
+        background-image: url('/assets/media/project.jpg');
+        filter: brightness(0.4);
+      "
+    >
+      <div class="container">
+        <div class="carousel-caption text-center">
+          <h5>정보처리기사</h5>
+          <p>2024-06-18</p>
         </div>
       </div>
-
-      <!-- Carousel Controls -->
-      <a
-        class="carousel-control-prev"
-        href="#exampleCarousel"
-        role="button"
-        data-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a
-        class="carousel-control-next"
-        href="#exampleCarousel"
-        role="button"
-        data-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
     </div>
+    <div
+      class="carousel-item"
+      style="
+        background-image: url('/assets/media/project2.jpg');
+        filter: brightness(0.4);
+      "
+    >
+      <div class="container">
+        <div class="carousel-caption text-center">
+          <h5>AdSP</h5>
+          <p>2024-09-24</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $("#exampleCarousel").carousel();
-      });
-    </script>
-  </body>
-</html>
+  <!-- Carousel Controls -->
+  <a
+    class="carousel-control-prev"
+    href="#exampleCarousel"
+    role="button"
+    data-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a
+    class="carousel-control-next"
+    href="#exampleCarousel"
+    role="button"
+    data-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</div>
