@@ -1,53 +1,71 @@
-<!-- layouts/partials/blox/slider.html -->
-<div
-  class="custom-slider"
-  style="height: {{ with .height }}{{ . }}{{ else }}350px{{ end }};"
->
-  <!-- Default interval set to 3000ms, can be overridden -->
-  <div
-    id="sliderCarousel"
-    class="carousel slide"
-    data-bs-ride="carousel"
-    data-bs-interval="{{ with .interval }}{{ . }}{{ else }}3000{{ end }}"
-  >
-    <div class="carousel-inner">
-      <!-- Loop through the slides provided in the .slides array -->
-      {{ range $index, $slide := .slides }}
-      <div class="carousel-item {{ if eq $index 0 }}active{{ end }}">
-        <!-- Apply background image, position, brightness filter, and background color -->
-        <div
-          class="slider-backdrop"
-          style="background-image: url('{{ $slide.background.image.filename }}'); background-position: {{ $slide.background.position }}; filter: brightness({{ $slide.background.filters.brightness }}); background-color: {{ $slide.background.color }};"
-        >
-          <div
-            class="slider-content-container"
-            style="text-align: {{ $slide.align }};"
-          >
-            <h2>{{ $slide.title | safeHTML }}</h2>
-            <p>{{ $slide.content | safeHTML }}</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style></style>
+  </head>
+  <body>
+    <!-- layouts/partials/blox/slider.html -->
+    <div
+      class="custom-slider"
+      style="height: {{ with .height }}{{ . }}{{ else }}350px{{ end }};"
+    >
+      <!-- Default interval set to 3000ms, can be overridden -->
+      <div
+        id="sliderCarousel"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="{{ with .interval }}{{ . }}{{ else }}3000{{ end }}"
+      >
+        <div class="carousel-inner">
+          <!-- Loop through the slides provided in the .slides array -->
+          {{ range $index, $slide := .slides }}
+          <div class="carousel-item {{ if eq $index 0 }}active{{ end }}">
+            <!-- Apply background image, position, brightness filter, and background color -->
+            <div
+              class="slider-backdrop"
+              style="background-image: url('{{ $slide.background.image.filename }}'); background-position: {{ $slide.background.position }}; filter: brightness({{ $slide.background.filters.brightness }}); background-color: {{ $slide.background.color }};"
+            >
+              <div
+                class="slider-content-container"
+                style="text-align: {{ $slide.align }};"
+              >
+                <h2>{{ $slide.title | safeHTML }}</h2>
+                <p>{{ $slide.content | safeHTML }}</p>
+              </div>
+            </div>
           </div>
+          {{ end }}
         </div>
+        <!-- Navigation arrows -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#sliderCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#sliderCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-      {{ end }}
     </div>
-    <!-- Navigation arrows -->
-    <button
-      class="carousel-control-prev"
-      type="button"
-      data-bs-target="#sliderCarousel"
-      data-bs-slide="prev"
-    >
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button
-      class="carousel-control-next"
-      type="button"
-      data-bs-target="#sliderCarousel"
-      data-bs-slide="next"
-    >
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-</div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  </body>
+</html>
