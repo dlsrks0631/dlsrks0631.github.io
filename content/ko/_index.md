@@ -102,7 +102,7 @@ sections:
         folders:
           - careers
     design:
-      date_format: "January 2006"
+      # date_format: "January 2006"
       is_education_first: false
       background:
         color: "#f2f3f7"
