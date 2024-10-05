@@ -110,9 +110,11 @@ sections:
   - block: slider
     # id: slider
     content:
+      - title: Certificate
       slides:
-        - title: Recruit
+        - title: 정보처리기사
           content: Interested in JAVA?
+          date: "2024-06-18"
           align: center
           background:
             image:
