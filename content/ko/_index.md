@@ -113,7 +113,7 @@ sections:
       # - title: Certificate
       slides:
         - title: 정보처리기사
-          content: 2024-06-19
+          content: 2024-06-18
           align: center
           background:
             image:
@@ -123,8 +123,8 @@ sections:
             position: center
             color: "#000"
 
-        - title: 정보처리기사
-          content: 2024-06-185
+        - title: AdSP
+          content: 2024-09-24
           align: center
           background:
             image:
@@ -133,8 +133,8 @@ sections:
                 brightness: 0.4
             position: center
 
-        - title: 정보처리기사
-          content: 2024-06-1866
+        - title: SQLD
+          content: 2022-12-02
           align: center
           background:
             image:
@@ -143,8 +143,8 @@ sections:
                 brightness: 0.4
             position: center
 
-        - title: spring
-          content: 자바 스프링 백엔드 개발
+        - title: 리눅스마스터 2급
+          content: 2024-10-04
           align: center
           background:
             image:
