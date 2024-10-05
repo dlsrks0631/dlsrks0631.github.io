@@ -107,86 +107,6 @@ sections:
       background:
         color: "#f2f3f7"
 
-  #### Slider
-  - block: slider
-    content:
-      slides:
-        - title: AI
-          content: "Just opened last month!"
-          align: center
-          background:
-            image:
-              filename: logo.jpg
-              filters:
-                brightness: 0.5
-            position: center
-            color: "#333"
-        - title: AI
-          content: "Just opened last month!"
-          align: center
-          background:
-            image:
-              filename: logo.jpg
-              filters:
-                brightness: 0.5
-            position: center
-            color: "#333"
-        - title: AI
-          content: "Just opened last month!"
-          align: center
-          background:
-            image:
-              filename: logo.jpg
-              filters:
-                brightness: 0.5
-            position: center
-            color: "#333"
-        - title: AI
-          content: "Just opened last month!"
-          align: center
-          background:
-            image:
-              filename: logo.jpg
-              filters:
-                brightness: 0.5
-            position: center
-            color: "#333"
-      design:
-        # Slide height is automatic unless you force a specific height (e.g. '400px')
-        slide_height: "350px"
-        slide_width: "100px"
-        is_fullscreen: false
-        # Automatically transition through slides?
-        loop: true
-        # Duration of transition between slides (in ms)
-        interval: 3000
-
-  #### Contact
-  - block: contact
-    id: contact
-    content:
-      title: Contact
-      text: |-
-        나에게 관심이 있다면 여기로 !!!!!!!
-      email: dlsrks0631@naver.com
-      phone: 010-6758-1234
-      address:
-        street: 전북대학교 공과대학 7호관
-        city: 전주시
-        region: 전라북도
-        postcode: "54896"
-        country: 대한민국
-        country_code: KO
-      coordinates:
-        latitude: "35.84601324617979"
-        longitude: "127.13444961966684"
-      directions:
-      autolink: true
-    design:
-      columns: "3"
-      background:
-        color: "#f2f3f7"
-
   - block: slider
     id: slider
     content:
@@ -218,4 +138,30 @@ sections:
         is_fullscreen: false
         loop: true
         interval: 3000
+
+  #### Contact
+  - block: contact
+    id: contact
+    content:
+      title: Contact
+      text: |-
+        나에게 관심이 있다면 여기로 !!!!!!!
+      email: dlsrks0631@naver.com
+      phone: 010-6758-1234
+      address:
+        street: 전북대학교 공과대학 7호관
+        city: 전주시
+        region: 전라북도
+        postcode: "54896"
+        country: 대한민국
+        country_code: KO
+      coordinates:
+        latitude: "35.84601324617979"
+        longitude: "127.13444961966684"
+      directions:
+      autolink: true
+    design:
+      columns: "3"
+      background:
+        color: "#f2f3f7"
 ---
