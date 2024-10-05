@@ -1,8 +1,8 @@
 ---
 title: 연구개발인턴
 subtitle: Knowledge-Tech (케이테크)
-date: 2024-02-01 ~ 
 external_link: https://www.khub.kr
+summary: 2019-03-01 ~ 
 tags:
   - ktech
 ---
