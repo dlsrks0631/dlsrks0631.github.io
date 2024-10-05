@@ -22,7 +22,7 @@
     {{ range $index, $item := $block.content.slides }}
     <div class="carousel-item{{if eq $index 0}} active{{end}}">
         <div class="d-flex justify-content-center align-items-center" style="height: 100%;
-        background-image: url('{{ printf "/media/%s" $item.background.image.filename }}'); 
+        background-image: url('{{ printf "/assets/media/%s" $item.background.image.filename }}'); 
         filter: brightness({{ $item.background.image.filters.brightness }}); 
         background-size: cover; background-position: center;">
             <div class="container">
