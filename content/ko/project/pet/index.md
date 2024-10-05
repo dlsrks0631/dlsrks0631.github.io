@@ -1,6 +1,6 @@
 ---
 title: 산책친구 만들기
-date: 2023-06-01 ~ 2023-12-26
+summary: 2024-03-01 ~ 2024-06-01
 external_link: https://github.com/dlsrks0631/petner_mobile_app
 # tags:
 ---

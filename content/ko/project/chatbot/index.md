@@ -1,6 +1,6 @@
 ---
 title: FAQ Chatbot
-date: 2024-01-01 ~ 2024-03-01
+summary: 2024-01-01 ~ 2024-03-01
 external_link: https://github.com/dlsrks0631/FAQChatbot_Chatgpt
 # tags:
 ---
