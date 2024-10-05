@@ -1,26 +1,24 @@
-{{/* Hugo Blox: Slider */}}
-{{/* Documentation: https://hugoblox.com/blocks/ */}}
-{{/* License: https://github.com/HugoBlox/hugo-blox-builder/blob/main/LICENSE.md */}}
-
 {{/* Initialise */}}
 {{ $page := .wcPage }}
 {{ $block := .wcBlock }}
 {{ $hash_id := .wcIdentifier }}
 {{ $slide_count := len $block.content.slides }}
 
-<!-- Indicators -->
-{{ if gt $slide_count 1 }}
-<ol class="carousel-indicators">
-  {{ range $index, $item := $block.content.slides }}
-  <li data-target="#{{$hash_id}}" data-slide-to="{{$index}}" {{if eq $index 0}}class="active"{{end}}></li>
+<!-- Carousel Wrapper -->
+<div id="{{$hash_id}}" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  {{ if gt $slide_count 1 }}
+  <ol class="carousel-indicators">
+    {{ range $index, $item := $block.content.slides }}
+    <li data-target="#{{$hash_id}}" data-slide-to="{{$index}}" {{if eq $index 0}}class="active"{{end}}></li>
+    {{ end }}
+  </ol>
   {{ end }}
-</ol>
-{{ end }}
 
-<!-- Carousel slides wrapper -->
-<div class="carousel-inner">
-  {{ range $index, $item := $block.content.slides }}
-
+  <!-- Carousel Inner -->
+  <div class="carousel-inner">
+    {{ range $index, $item := $block.content.slides }}
     {{ $style_bg := "" }}
     {{ $style_filter := "" }}
 
@@ -48,49 +46,36 @@
       {{ with $bg.image.filters.brightness }}
         {{ $style_filter = printf "%s-webkit-backdrop-filter: brightness(%s); backdrop-filter: brightness(%s);" $style_filter (string .) (string .) }}
       {{ end }}
-   {{ end }}
+    {{ end }}
 
-  <div class="carousel-item{{if eq $index 0}} active{{end}} {{with $block.design.is_fullscreen}}fullscreen{{end}}" style="{{$style_bg | safeCSS}}">
-    <div class="position-absolute d-flex w-100 h-100 justify-content-center align-items-center" style="{{$style_filter | safeCSS}}">
-      {{/* To prevent control overlap, margins are based on $carousel-control-* in bootstrap-variables.scss */}}
-      <div class="wg-hero dark container" style="margin-left: 6rem; margin-right: 6rem; text-align: {{$item.align | default "left"}};">
-          <h1 class="hero-title ">
-            {{ with $item.title }}{{ . | markdownify | emojify }}{{ end }}
-          </h1>
-
+    <div class="carousel-item{{if eq $index 0}} active{{end}}" style="{{$style_bg | safeCSS}}">
+      <div class="d-flex justify-content-center align-items-center" style="height: 100%; {{$style_filter | safeCSS}}">
+        <div class="container text-{{$item.align | default "left"}}">
+          <h1>{{ with $item.title }}{{ . | markdownify | emojify }}{{ end }}</h1>
           {{ with $item.content }}
-          <p class="hero-lead" style="{{if eq $item.align "center"}}margin: 0 auto 0 auto;{{else if eq $item.align "right"}}margin-left: auto; margin-right: 0{{end}}">
-            {{ . | emojify | $page.RenderString }}
-          </p>
+          <p>{{ . | emojify | $page.RenderString }}</p>
           {{ end }}
-
           {{ if $item.link.url }}
-            {{ $pack := $item.link.icon_pack | default "fas" }}
-            {{ $pack_prefix := $pack }}
-            {{ if in (slice "fab" "fas" "far" "fal") $pack }}
-              {{ $pack_prefix = "fa" }}
-            {{ end }}
-            <p>
-              <a href="{{ $item.link.url }}" class="btn btn-light btn-lg mt-3">
-                {{- with $item.link.icon -}}<i class="{{ $pack }} {{ $pack_prefix }}-{{ . }}" style="padding-right: 10px;"></i>{{- end -}}
-                {{- $item.link.text | emojify | markdownify | safeHTML -}}
-              </a>
-            </p>
+          <a href="{{ $item.link.url }}" class="btn btn-primary">
+            {{- with $item.link.icon -}}<i class="{{ $item.link.icon_pack | default "fas" }} fa-{{ . }}"></i>{{- end -}}
+            {{- $item.link.text | emojify | markdownify -}}
+          </a>
           {{ end }}
         </div>
+      </div>
     </div>
+    {{ end }}
   </div>
+
+  <!-- Controls -->
+  {{ if gt $slide_count 1 }}
+  <a class="carousel-control-prev" href="#{{$hash_id}}" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#{{$hash_id}}" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
   {{ end }}
 </div>
-
-<!-- Left and right controls -->
-{{ if gt $slide_count 1 }}
-<a class="carousel-control-prev" href="#{{$hash_id}}" data-slide="prev">
-  <span class="carousel-control-prev-icon"></span>
-  <span class="sr-only">Previous</span>
-</a>
-<a class="carousel-control-next" href="#{{$hash_id}}" data-slide="next">
-  <span class="carousel-control-next-icon"></span>
-  <span class="sr-only">Next</span>
-</a>
-{{ end }}
