@@ -1,100 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-    }
-    .mb-4 h2 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-    .mb-4 p {
-      margin-bottom: 1rem;
-    }
-    .contact-item {
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-    }
-    .contact-icon {
-      min-width: 50px;
-      color: #007bff;
-      font-size: 1.5rem;
-    }
-    .contact-text {
-      margin-left: 15px;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    #map {
-      height: 350px;
-      width: 100%;
-      margin-bottom: 20px;
-    }
-  </style>
-</head>
-<body>
-<div class="container">
-  <div class="mb-4">
-    <h2>Contact Information</h2>
-    <p>Please feel free to reach out to us with any questions or comments!</p>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
+      .mb-4 h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+      .mb-4 p {
+        margin-bottom: 1rem;
+      }
+      .contact-item {
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+      }
+      .contact-icon {
+        min-width: 50px;
+        color: #007bff;
+        font-size: 1.5rem;
+      }
+      .contact-text {
+        margin-left: 15px;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      #map {
+        height: 350px;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="mb-4">
+        <h2>Contact Information</h2>
+        <p>궁금한 점이나 의견이 있으시면 언제든지 연락주세요!</p>
+      </div>
 
-  <ul class="list-unstyled">
-    <!-- Email -->
-    <li class="contact-item">
-      <i class="contact-icon fas fa-envelope"></i>
-      <span class="contact-text"><a href="mailto:example@example.com">dlsrks0631@naver.com</a></span>
-    </li>
+      <ul class="list-unstyled">
+        <!-- Email -->
+        <li class="contact-item">
+          <i class="contact-icon fas fa-envelope"></i>
+          <span class="contact-text"
+            ><a href="mailto:example@example.com">dlsrks0631@naver.com</a></span
+          >
+        </li>
 
-    <!-- Phone -->
-    <li class="contact-item">
-      <i class="contact-icon fas fa-phone"></i>
-      <span class="contact-text"><a href="tel:+1234567890">010-6758-4567</a></span>
-    </li>
+        <!-- Phone -->
+        <li class="contact-item">
+          <i class="contact-icon fas fa-phone"></i>
+          <span class="contact-text"
+            ><a href="tel:+1234567890">010-6758-4567</a></span
+          >
+        </li>
 
-    <!-- Address -->
-    <li class="contact-item">
-      <i class="contact-icon fas fa-map-marker-alt"></i>
-      <span class="contact-text">전북대학교 공과대학 7호관</span>
-    </li>
+        <!-- Address -->
+        <li class="contact-item">
+          <i class="contact-icon fas fa-map-marker-alt"></i>
+          <span class="contact-text">전북대학교 공과대학 7호관</span>
+        </li>
 
-    <!-- Office Hours -->
-    <li class="contact-item">
-      <i class="contact-icon fas fa-clock"></i>
-      <span class="contact-text">Mon - Fri, 9:00 AM to 5:00 PM</span>
-    </li>
-  </ul>
+        <!-- Office Hours -->
+        <li class="contact-item">
+          <i class="contact-icon fas fa-clock"></i>
+          <span class="contact-text">Mon - Fri, 9:00 AM to 5:00 PM</span>
+        </li>
+      </ul>
 
-  <div id="map"></div>
-</div>
+      <div id="map"></div>
+    </div>
 
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    // Initialize the map on the "map" div
-    var map = L.map('map').setView([35.851786, 127.128730], 13);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap contributors'
-    }).addTo(map);
-    var marker = L.marker([51.505, -0.09]).addTo(map);
-    marker.bindPopup("<b>안녕</b><br />난 여기에 있다.").openPopup();
-  });
-</script>
-
-</body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize the map on the "map" div
+        var map = L.map("map").setView([35.851786, 127.12873], 13);
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          attribution: "© OpenStreetMap contributors",
+        }).addTo(map);
+        var marker = L.marker([51.505, -0.09]).addTo(map);
+        marker.bindPopup("<b>안녕</b><br />난 여기에 있다.").openPopup();
+      });
+    </script>
+  </body>
 </html>
