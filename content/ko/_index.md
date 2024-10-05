@@ -123,6 +123,28 @@ sections:
             position: center
             color: "#000"
 
+        - title: 정보처리기사
+          content: 2024-06-18
+          align: center
+          background:
+            image:
+              filename: project.jpg
+              filters:
+                brightness: 0.4
+            position: center
+            color: "#000"
+
+        - title: 정보처리기사
+          content: 2024-06-18
+          align: center
+          background:
+            image:
+              filename: project.jpg
+              filters:
+                brightness: 0.4
+            position: center
+            color: "#000"
+
         - title: spring
           content: 자바 스프링 백엔드 개발
           align: center
