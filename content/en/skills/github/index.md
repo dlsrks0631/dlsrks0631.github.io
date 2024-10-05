@@ -2,9 +2,7 @@
 title: GitHub
 external_link: https://github.com/pandas-dev/pandas
 tags:
-  - Hugo
-  - Wowchemy
-  - Markdown
+  - Github
 ---
 
 

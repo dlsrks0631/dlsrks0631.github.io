@@ -7,6 +7,6 @@ tags:
   - Markdown
 ---
 
-공부 및 지식 공유 목적의 블로그
+Blog for study
 
 <!--more-->
