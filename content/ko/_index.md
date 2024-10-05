@@ -169,7 +169,7 @@ sections:
 
       design:
         slide_height: 350px
-        is_fullscreen: false
+        is_fullscreen: true
         loop: true
         interval: 3000
         background:
