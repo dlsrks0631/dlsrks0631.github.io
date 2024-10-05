@@ -35,6 +35,7 @@
   <body>
     <div class="container">
       <h2>Image Slider</h2>
+      {{ range $index, $slide := $slides }}
       <div class="slider">
         <h5>{{ $slide.title }}</h5>
         <p>{{ $slide.description }}</p>
