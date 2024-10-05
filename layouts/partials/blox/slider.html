@@ -111,6 +111,7 @@
                   <div class="carousel-caption text-{{$item.align | default "center"}}">
                       <h1>{{ $item.title }}</h1>
                       <p>{{ $item.content }}</p>
+                      
                       {{ if $item.link.url }}
                       <p><a class="btn btn-lg btn-primary" href="{{$item.link.url}}" role="button">{{ $item.link.text }}</a></p>
                       {{ end }}

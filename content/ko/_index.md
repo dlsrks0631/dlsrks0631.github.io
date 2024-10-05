@@ -113,7 +113,7 @@ sections:
       # - title: Certificate
       slides:
         - title: 정보처리기사
-          content: 2024-06-18
+          content: 2024-06-19
           align: center
           background:
             image:
@@ -132,7 +132,6 @@ sections:
               filters:
                 brightness: 0.4
             position: center
-            color: "#000"
 
         - title: 정보처리기사
           content: 2024-06-18
@@ -143,7 +142,6 @@ sections:
               filters:
                 brightness: 0.4
             position: center
-            color: "#000"
 
         - title: spring
           content: 자바 스프링 백엔드 개발
@@ -154,7 +152,6 @@ sections:
               filters:
                 brightness: 0.4
             position: center
-            color: "#000"
 
         - title: java spring
           content: 자바 스프링 백엔드 개발
@@ -165,7 +162,6 @@ sections:
               filters:
                 brightness: 0.4
             position: center
-            color: "#000"
 
       design:
         slide_height: 1000px
