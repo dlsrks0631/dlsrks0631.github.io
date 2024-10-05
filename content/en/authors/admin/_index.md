@@ -23,7 +23,7 @@ highlight_name: true
 role: JAVA Backend
 
 organizations:
-  - name: 전북대학교
+  - name: Jeonbuk University
     url: https://www.jbnu.ac.kr/kor/
 
 # Social network links
@@ -63,7 +63,7 @@ work:
     date_end: ""
     summary: |2-
       Responsibilities include:
-      - 기능 개발 및 서버 관리
+      - Develop Backend
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`

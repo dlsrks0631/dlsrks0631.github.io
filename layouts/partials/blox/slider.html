@@ -103,7 +103,8 @@
     <!-- Carousel slides wrapper -->
     <div class="carousel-inner">
         {{ range $index, $item := $block.content.slides }}
-        <div class="carousel-item {{if eq $index 0}}active{{end}}" style="background-image: url('{{ printf "/assets/media/%s" $item.background.image.filename }}'); filter: brightness({{ $item.background.image.filters.brightness }});">
+        <div class="carousel-item">
+            <img class="d-block w-100" src="{{ $item.image }}" alt="{{ $item.title }}">
             <div class="container">
                 <div class="carousel-caption text-{{$item.align | default "center"}}">
                     <h1>{{ $item.title }}</h1>
