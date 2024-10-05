@@ -103,8 +103,7 @@
   <div class="carousel-inner">
     {{ range $index, $slide := $block.content.slides }}
     <div class="carousel-item{{if eq $index 0}} active{{end}}">
-      <img class="d-block w-100" src="{{"/assets/media/%s"
-      $slide.background.image.filename }}" alt="Slide {{$index}}">
+      <!-- <img class="d-block w-100"/> -->
       <div class="carousel-caption d-none d-md-block">
         <h5>{{ $slide.title }}</h5>
         <p>{{ $slide.content }}</p>
