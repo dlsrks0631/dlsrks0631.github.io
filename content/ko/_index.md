@@ -83,6 +83,9 @@ sections:
     id: projects
     content:
       title: Projects
+      filters:
+        folders:
+          - project
     design:
       view: article-grid
       columns: 3
