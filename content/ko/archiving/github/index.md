@@ -1,11 +1,10 @@
 ---
 title: GitHub
-external_link: https://github.com/pandas-dev/pandas
+external_link: https://github.com/dlsrks0631/
 tags:
-  - Hugo
-  - Wowchemy
-  - Markdown
+  - Github
 ---
 
 소스코드 저장소
+
 <!--more-->

@@ -1,10 +1,8 @@
 ---
 title: velog
-external_link: https://github.com/pandas-dev/pandas
+external_link: https://velog.io/@dlsrks0631/posts
 tags:
-  - Hugo
-  - Wowchemy
-  - Markdown
+  - velog
 ---
 
 공부 및 지식 공유 목적의 블로그
