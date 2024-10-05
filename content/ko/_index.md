@@ -122,7 +122,7 @@ sections:
             position: center
             color: "#000"
 
-        - title: java spring
+        - title: spring
           content: 자바 스프링 백엔드 개발
           align: center
           background:
