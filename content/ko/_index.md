@@ -113,8 +113,7 @@ sections:
       - title: Certificate
       slides:
         - title: 정보처리기사
-          content: Interested in JAVA?
-          date: "2024-06-18"
+          content: 2024-06-18
           align: center
           background:
             image:
