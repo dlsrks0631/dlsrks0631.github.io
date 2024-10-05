@@ -110,7 +110,7 @@ sections:
   - block: slider
     # id: slider
     content:
-      - title: Certificate
+      # - title: Certificate
       slides:
         - title: 정보처리기사
           content: 2024-06-18
