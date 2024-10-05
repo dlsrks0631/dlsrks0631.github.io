@@ -80,6 +80,9 @@ sections:
     id: projects
     content:
       title: Projects
+      filters:
+        folders:
+          - project
     design:
       view: article-grid
       columns: 3
@@ -92,6 +95,9 @@ sections:
     content:
       title: Careers
       username: admin
+      filters:
+        folders:
+          - careers
     design:
       date_format: "January 2006"
       is_education_first: false
