@@ -150,6 +150,8 @@ sections:
         is_fullscreen: false
         loop: true
         interval: 3000
+        background:
+          color: "#f2f3f7"
 
   #### Contact
   - block: contact
