@@ -1,6 +1,6 @@
 ---
 # Display name
-title: 김제현
+title: Kimjehyeon
 
 # Name pronunciation (optional)
 # name_pronunciation: jehyeon
@@ -20,7 +20,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: JAVA 백엔드 개발자
+role: JAVA Backend
 
 organizations:
   - name: 전북대학교
@@ -43,19 +43,19 @@ interests:
   - Database
 
 education:
-  - area: 컴퓨터인공지능학부
+  - area: Computer Science
     institution: Jeonbuk University
     date_start: 2022-01-01
     date_end: 2025-12-31
     summary: |
-      전북대학교에서 컴퓨터 공학을 전공하고 있습니다.
+      Computer Science in Jeonbuk University
     button:
       text: "Read Thesis"
       url: "https://example.com"
 
 # experience 칸
 work:
-  - position: 연구개발인턴
+  - position: Intern
     company_name: Knowledge-Tech (케이테크)
     company_url: "https://www.khub.kr/home/index.jsp"
     company_logo: ""
