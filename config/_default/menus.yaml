@@ -13,10 +13,10 @@ main:
   - name: Archiving
     url: /#archiving
     parent: About me
-  - name: Skills
+  - name: Skill
     url: /#skills
     weight: 13
-  - name: Archiving
+  - name: Archive
     url: /#archiving
     weight: 16
   - name: Projects
