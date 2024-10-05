@@ -80,42 +80,49 @@
   }
 </style>
 
-{{ $page := .wcPage }} {{ $block := .wcBlock }} {{ $hash_id := "exampleCarousel"
-}} {{ $slide_count := len $block.content.slides }}
-
-<div id="{{$hash_id}}" class="carousel" data-ride="carousel">
+<div id="exampleCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    {{ range $index, $slide := $block.content.slides }}
-    <li
-      data-target="#{{$hash_id}}"
-      data-slide-to="{{$index}}"
-      {{if
-      eq
-      $index
-      0}}class="active"
-      {{end}}
-    ></li>
-    {{ end }}
+    <li data-target="#exampleCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#exampleCarousel" data-slide-to="1"></li>
   </ol>
 
   <!-- Carousel slides wrapper -->
   <div class="carousel-inner">
-    {{ range $index, $slide := $block.content.slides }}
-    <div class="carousel-item{{if eq $index 0}} active{{end}}">
-      <!-- <img class="d-block w-100"/> -->
-      <div class="carousel-caption d-none d-md-block">
-        <h5>{{ $slide.title }}</h5>
-        <p>{{ $slide.content }}</p>
+    <div
+      class="carousel-item active"
+      style="
+        background-image: url('/assets/media/project.jpg');
+        filter: brightness(0.4);
+      "
+    >
+      <div class="container">
+        <div class="carousel-caption text-center">
+          <h5>정보처리기사</h5>
+          <p>2024-06-18</p>
+        </div>
       </div>
     </div>
-    {{ end }}
+    <div
+      class="carousel-item"
+      style="
+        background-image: url('/assets/media/project2.jpg');
+        filter: brightness(0.4);
+      "
+    >
+      <div class="container">
+        <div class="carousel-caption text-center">
+          <h5>AdSP</h5>
+          <p>2024-09-24</p>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Controls -->
   <a
     class="carousel-control-prev"
-    href="#{{$hash_id}}"
+    href="#exampleCarousel"
     role="button"
     data-slide="prev"
   >
@@ -124,12 +131,12 @@
   </a>
   <a
     class="carousel-control-next"
-    href="#{{$hash_id}}"
+    href="#exampleCarousel"
     role="button"
     data-slide="next"
   >
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span the="sr-only">Next</span>
+    <span class="sr-only">Next</span>
   </a>
 </div>
 
@@ -138,6 +145,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script>
   $(document).ready(function () {
-    $("#{{$hash_id}}").carousel();
+    $("#exampleCarousel").carousel();
   });
 </script>
