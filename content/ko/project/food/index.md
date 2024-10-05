@@ -1,6 +1,6 @@
 ---
 title: 맛집 추천 서비스
-external_link: https://github.com/pandas-dev/pandas
+external_link: https://github.com/dlsrks0631/weather_seller
 tags:
 ---
 
