@@ -97,7 +97,7 @@
       <!-- Indicators -->
       <ol class="carousel-indicators">
           {{ range $index, $item := $block.content.slides }}
-          <li data-target="#{{$hash_id}}" data-slide-to="{{$index}}" {{if eq $index 0}}class="active"{{end}}></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="{{$index}}" {{if eq $index 0}}class="active"{{end}}></li>
           {{ end }}
       </ol>
   
