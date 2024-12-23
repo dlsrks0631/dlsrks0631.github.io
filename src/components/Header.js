@@ -1,3 +1,4 @@
+// Header.js
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import styles from "./Header.module.css";
@@ -6,6 +7,8 @@ import styles from "./Header.module.css";
 function Header({
   isLoggedIn,
   fullName,
+  email,
+  profileImage,
   onLogout,
   onToggleTheme,
   currentTheme,
@@ -18,12 +21,12 @@ function Header({
   const getTranslatedText = (text) => {
     const translations = {
       KR: {
-        LOGIN: "\uB85C\uADF8\uC778", // 로그인
-        LOGOUT: "\uB85C\uADF8\uC544\uC6C3", // 로그아웃
-        "Light Mode": "\uB77C\uC774\uD2B8 \uBAA8\uB4DC", // 라이트 모드
-        "Dark Mode": "\uB2E4\uD06C \uBAA8\uB4DC", // 다크 모드
-        Welcome: "환영합니다", // 환영합니다
-        Popular: "인기 영화", // 인기 영화
+        LOGIN: "로그인",
+        LOGOUT: "로그아웃",
+        "Light Mode": "라이트 모드",
+        "Dark Mode": "다크 모드",
+        Welcome: "환영합니다",
+        Popular: "인기 영화",
       },
       EN: {
         LOGIN: "LOGIN",
@@ -44,7 +47,7 @@ function Header({
     setLanguageMenuVisible(!languageMenuVisible);
   };
 
-  // Check if the current path is the home page
+  // 현재 경로가 홈 페이지인지 확인
   const isHomePage = location.pathname === "/";
 
   return (
@@ -53,7 +56,7 @@ function Header({
         <Link to="/" className={styles.logo}>
           NETFLEX
         </Link>
-        {/* Only show the rest of the header content if on the home page */}
+        {/* 홈 페이지일 때만 나머지 헤더 내용 표시 */}
         {isHomePage && (
           <nav className={styles.nav}>
             <ul className={styles.navList}>
@@ -75,8 +78,12 @@ function Header({
                 </button>
                 {languageMenuVisible && (
                   <div className={styles.languageMenu}>
-                    <button onClick={() => onToggleLanguage("KR")}>한국어</button>
-                    <button onClick={() => onToggleLanguage("EN")}>English</button>
+                    <button onClick={() => onToggleLanguage("KR")}>
+                      한국어
+                    </button>
+                    <button onClick={() => onToggleLanguage("EN")}>
+                      English
+                    </button>
                   </div>
                 )}
               </li>
@@ -87,8 +94,17 @@ function Header({
               </li>
               {isLoggedIn ? (
                 <>
-                  <li className={styles.username}>
-                    {getTranslatedText("Welcome")}, {fullName}
+                  <li className={styles.userInfo}>
+                    {profileImage && (
+                      <img
+                        src={profileImage}
+                        alt="Profile"
+                        className={styles.profileImage}
+                      />
+                    )}
+                    <span className={styles.username}>
+                      {getTranslatedText("Welcome")}, {fullName}
+                    </span>
                   </li>
                   <li>
                     <button className={styles.logoutButton} onClick={onLogout}>

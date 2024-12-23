@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Movie from "../components/Movie";
-import Header from "../components/Header";
 import styles from "./Home.module.css"; // Ensure correct path
 import "../index.css"; // Import index.css for theme styles
 
@@ -23,7 +22,8 @@ function Home({
     return savedFavorites ? JSON.parse(savedFavorites) : [];
   });
   const [currentPage, setCurrentPage] = useState(1);
-  const apiKey = "f26e473a740a9c8ca94f2586e8520c9f";
+
+  const apiKey = process.env.REACT_APP_TMDB_API_KEY;
 
   useEffect(() => {
     document.body.className = theme;
@@ -187,15 +187,6 @@ function Home({
 
   return (
     <div className={styles.page}>
-      <Header
-        onToggleTheme={onToggleTheme}
-        currentTheme={theme}
-        onToggleLanguage={onToggleLanguage}
-        currentLanguage={language}
-        isLoggedIn={isLoggedIn}
-        fullName={fullName}
-        onLogout={onLogout}
-      />
       <div className={styles.controls}>
         <label>
           {getTranslatedText("Sort by")}:
