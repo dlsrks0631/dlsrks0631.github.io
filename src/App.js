@@ -198,7 +198,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename="/moviedb">
       {/* Header 컴포넌트를 전체 페이지에 고정 */}
       <Header
         isLoggedIn={isLoggedIn}
