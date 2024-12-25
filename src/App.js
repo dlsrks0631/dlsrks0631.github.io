@@ -218,7 +218,6 @@ function App() {
         <Route path="/signup" element={<Signup onSignup={handleSignup} />} />
         <Route path="/popular" element={<Popular />} />
         <Route path="/movie/:id" element={<Detail />} />
-        {/* <Route path="/moviedb" element={<Navigate to="/" />} /> */}
         <Route
           path="/"
           element={
