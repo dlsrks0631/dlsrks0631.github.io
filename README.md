@@ -1,70 +1,118 @@
-# Getting Started with Create React App
+# Movie App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React를 사용하여 영화 정보를 제공하는 웹 애플리케이션입니다.
 
-## Available Scripts
+## 프로젝트 개요
 
-In the project directory, you can run:
+- **기능**: 인기 영화 목록 보기, 검색, 정렬, 즐겨찾기 추가/제거, 사용자 인증(카카오 로그인)
+- **사용 기술**:
+  - React
+  - TMDB API (영화 데이터 제공)
+  - 환경 변수 관리 (.env)
+  - CORS 해결을 위한 Express 서버 (백엔드)
+  - GitHub Pages를 통한 배포
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 설치 및 실행
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 1. 프로젝트 클론
 
-### `npm test`
+```bash
+git clone https://github.com/dlsrks0631/dlsrks0631.github.io.git movie-app
+cd movie-app
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 2. 의존성 설치
 
-### `npm run build`
+```bash
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 3. 환경 변수 설정
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`.env-prod`, `.env-dev` 파일을 작성해야 합니다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### `.env-dev`
 
-### `npm run eject`
+```env
+IP_ADDRESS=localhost
+PORT=3000
+REACT_APP_TMDB_API_KEY=YOUR_API_KEY
+REACT_APP_KAKAO_JS_KEY=YOUR_KAKAO_JS_KEY
+REACT_APP_DEFAULT_LANGUAGE=KR
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### `.env-prod`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```env
+IP_ADDRESS=your-production-server-ip
+PORT=80
+REACT_APP_TMDB_API_KEY=YOUR_API_KEY
+REACT_APP_KAKAO_JS_KEY=YOUR_KAKAO_JS_KEY
+REACT_APP_DEFAULT_LANGUAGE=EN
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**주의**: `.env`, `.env-dev`, `.env-prod` 파일은 `.gitignore`에 포함되어야 합니다.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 명령어
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 개발 서버 실행 (Development)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm start
+```
 
-### Code Splitting
+- 로컬 환경에서 개발 서버를 실행합니다. `http://localhost:3000`에서 앱을 확인할 수 있습니다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 배포 빌드 생성 (Production)
 
-### Analyzing the Bundle Size
+```bash
+npm run build:prod
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- 최적화된 프로덕션 빌드를 생성합니다. `build/` 폴더에 생성됩니다.
 
-### Making a Progressive Web App
+### 개발용 빌드 생성 (Development)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+npm run build:dev
+```
 
-### Advanced Configuration
+- 개발 환경용 빌드를 생성합니다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### GitHub Pages에 배포
 
-### Deployment
+```bash
+npm run deploy
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- `predeploy` 스크립트를 실행한 후 GitHub Pages로 배포합니다.
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 프로젝트 구조
+
+```
+movie-app/
+├── src/
+│   ├── components/      # 재사용 가능한 컴포넌트
+│   ├── routes/          # 페이지별 라우팅 컴포넌트
+│   ├── App.js           # 메인 App 컴포넌트
+│   └── index.js         # 진입점 파일
+├── public/
+├── .env                 # 환경 변수 파일
+├── package.json
+├── README.md
+└── .gitignore
+```
+
+---
+
+## 주의 사항
+
+1. `.env` 파일을 반드시 설정한 후 실행하세요.
+2. 프로젝트가 GitHub Pages에서 정상적으로 동작하려면 `package.json`의 `homepage` 필드를 정확히 설정해야 합니다.
+   - 예: `"homepage": "https://your-username.github.io/movie-app"`
