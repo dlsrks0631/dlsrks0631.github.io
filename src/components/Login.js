@@ -53,7 +53,7 @@ function Login({ onLogin }) {
             const userEmail = res.kakao_account?.email;
             const profileImage = res.kakao_account?.profile?.profile_image_url;
 
-            // 출력부분
+            // 카카오 추가 정보 출력부분
             console.log("Kakao ID:", kakaoId);
             console.log("Nickname:", nickname);
             console.log("Email:", userEmail);
@@ -74,7 +74,10 @@ function Login({ onLogin }) {
           },
           fail: function (error) {
             console.error("카카오 사용자 정보 요청 실패:", error);
-            alert("사용자 정보 조회에 실패했습니다.");
+            // 카카오 API 호출 실패 시
+            alert(
+              "사용자 정보를 불러오는 중 문제가 발생했습니다. 나중에 다시 시도해주세요."
+            );
             setIsKakaoLoading(false);
           },
         });

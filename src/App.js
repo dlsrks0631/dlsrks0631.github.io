@@ -4,7 +4,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Navigate,
 } from "react-router-dom";
 import Home from "./routes/Home";
 import Detail from "./routes/Detail";
@@ -199,7 +198,6 @@ function App() {
 
   return (
     <Router>
-      {/* Header 컴포넌트를 전체 페이지에 고정 */}
       <Header
         isLoggedIn={isLoggedIn}
         fullName={fullName}
@@ -212,7 +210,6 @@ function App() {
         currentLanguage={language}
       />
 
-      {/* 페이지 라우팅 */}
       <Routes>
         <Route path="/login" element={<Login onLogin={handleLogin} />} />
         <Route path="/signup" element={<Signup onSignup={handleSignup} />} />
