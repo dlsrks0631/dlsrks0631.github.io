@@ -3,6 +3,8 @@ import Movie from "../components/Movie";
 import styles from "./Home.module.css";
 import "../index.css";
 
+const DEFAULT_THEME = "dark-mode"; // Default theme 설정
+
 function Home({
   isLoggedIn,
   onLogout,
@@ -27,8 +29,9 @@ function Home({
 
   // 테마 적용
   useEffect(() => {
-    document.body.className = theme;
-  }, [theme]);
+    const savedTheme = localStorage.getItem("theme") || DEFAULT_THEME; // 저장된 테마가 없으면 기본 테마 사용
+    document.body.className = savedTheme;
+  }, []);
 
   // 즐겨찾기 업데이트
   useEffect(() => {
