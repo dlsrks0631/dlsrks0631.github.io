@@ -34,59 +34,62 @@ function Login({ onLogin }) {
       return;
     }
 
-    setIsKakaoLoading(true);
+    // 기존 세션 무효화
+    window.Kakao.Auth.logout(() => {
+      console.log("이전 세션 로그아웃 완료");
+      setIsKakaoLoading(true);
 
-    window.Kakao.Auth.login({
-      scope: "profile_nickname, profile_image",
-      success: function (authObj) {
-        console.log("카카오 로그인 성공:", authObj);
-        localStorage.setItem("kakaoAccessToken", authObj.access_token); // 액세스 토큰 저장
+      // 새로운 로그인 요청
+      window.Kakao.Auth.login({
+        scope: "profile_nickname, profile_image",
+        success: function (authObj) {
+          console.log("새로운 카카오 로그인 성공:", authObj);
+          localStorage.setItem("kakaoAccessToken", authObj.access_token); // 토큰 저장
 
-        window.Kakao.API.request({
-          url: "/v2/user/me",
-          success: function (res) {
-            console.log("카카오 사용자 정보:", res);
+          // 사용자 정보 요청
+          window.Kakao.API.request({
+            url: "/v2/user/me",
+            success: function (res) {
+              console.log("새로운 사용자 정보:", res);
+              const kakaoId = res.id;
+              const nickname =
+                res.kakao_account?.profile?.nickname || "닉네임 없음";
+              const userEmail = res.kakao_account?.email;
+              const profileImage =
+                res.kakao_account?.profile?.profile_image_url;
 
-            const kakaoId = res.id;
-            const nickname =
-              res.kakao_account?.profile?.nickname || "닉네임 없음";
-            const userEmail = res.kakao_account?.email;
-            const profileImage = res.kakao_account?.profile?.profile_image_url;
+              // 사용자 정보 출력
+              console.log("Kakao ID:", kakaoId);
+              console.log("Nickname:", nickname);
+              console.log("Email:", userEmail);
+              console.log("Profile Image URL:", profileImage);
 
-            // 카카오 추가 정보 출력부분
-            console.log("Kakao ID:", kakaoId);
-            console.log("Nickname:", nickname);
-            console.log("Email:", userEmail);
-            console.log("Profile Image URL:", profileImage);
+              alert(`환영합니다, ${nickname}님!`);
 
-            alert(`환영합니다, ${nickname}님!`);
+              onLogin(
+                userEmail || `kakao_${kakaoId}`,
+                null,
+                keepLoggedIn,
+                nickname,
+                profileImage
+              );
 
-            onLogin(
-              userEmail || `kakao_${kakaoId}`,
-              null,
-              keepLoggedIn,
-              nickname,
-              profileImage
-            );
-
-            setIsKakaoLoading(false);
-            navigate("/");
-          },
-          fail: function (error) {
-            console.error("카카오 사용자 정보 요청 실패:", error);
-            // 카카오 API 호출 실패 시
-            alert(
-              "사용자 정보를 불러오는 중 문제가 발생했습니다. 나중에 다시 시도해주세요."
-            );
-            setIsKakaoLoading(false);
-          },
-        });
-      },
-      fail: function (err) {
-        console.error("카카오 로그인 실패:", err);
-        alert("카카오 로그인에 실패했습니다.");
-        setIsKakaoLoading(false);
-      },
+              setIsKakaoLoading(false);
+              navigate("/");
+            },
+            fail: function (error) {
+              console.error("카카오 사용자 정보 요청 실패:", error);
+              alert("사용자 정보를 불러오는 중 문제가 발생했습니다.");
+              setIsKakaoLoading(false);
+            },
+          });
+        },
+        fail: function (err) {
+          console.error("카카오 로그인 실패:", err);
+          alert("카카오 로그인에 실패했습니다.");
+          setIsKakaoLoading(false);
+        },
+      });
     });
   };
 
